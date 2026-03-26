@@ -209,6 +209,26 @@
     animation: slideUp 0.6s ease-out;
 }
 
+@media (max-width: 640px) {
+    .blog-filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 var(--spacing-sm);
+        margin-left: calc(var(--spacing-sm) * -1);
+        margin-right: calc(var(--spacing-sm) * -1);
+        scroll-snap-type: x proximity;
+    }
+
+    .blog-filters .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        scroll-snap-align: start;
+    }
+}
+
 .filter-btn {
     padding: var(--spacing-sm) var(--spacing-lg);
     border: 2px solid var(--border-color);
@@ -429,6 +449,26 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: var(--spacing-2xl);
+}
+
+@media (max-width: 640px) {
+    .vlog-filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 var(--spacing-sm);
+        margin-left: calc(var(--spacing-sm) * -1);
+        margin-right: calc(var(--spacing-sm) * -1);
+        scroll-snap-type: x proximity;
+    }
+
+    .vlog-filters .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        scroll-snap-align: start;
+    }
 }
 
 .vlog-grid {

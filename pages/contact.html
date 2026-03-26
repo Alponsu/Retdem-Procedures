@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nursing RetDem</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div data-include="../partials/header.html"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1 class="header-title">Get In Touch</h1>
+            <p class="header-subtitle">Have questions? We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Your full name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="your@email.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+1 (555) 000-0000"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="inquiry">General Inquiry</option>
+                            <option value="volunteer">Volunteer Interest</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            required 
+                            placeholder="Tell us more about your inquiry..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="subscribe" 
+                            name="subscribe"
+                        >
+                        <label for="subscribe">Subscribe to our newsletter for updates</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </div>
+
+            <div class="contact-info-wrapper">
+                <h2>Contact Information</h2>
+                <div class="contact-info-group">
+                    <div class="contact-info-item">
+                        <h4>📍 Address</h4>
+                        <p>123 Healthcare Avenue<br>Medical Center, City 12345<br>Country</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h4>📞 Phone</h4>
+                        <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h4>📧 Email</h4>
+                        <p><a href="mailto:info@nursingretdem.com">info@nursingretdem.com</a></p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h4>⏰ Office Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                        Saturday: 10:00 AM - 2:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links-contact">
+                        <a href="#" class="social-link">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 class="faq-question">How can I volunteer with the RetDem program?</h4>
+                    <p class="faq-answer">You can reach out to us through the contact form above or visit the resources page for more information about volunteer opportunities with our nursing students.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">Is the program open to students from other institutions?</h4>
+                    <p class="faq-answer">While primarily designed for our nursing students, we welcome inquiries from other institutions about collaboration opportunities.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">How often are activities conducted?</h4>
+                    <p class="faq-answer">Our RetDem activities are scheduled regularly throughout the academic year. Visit our interactive map to see upcoming activities in your area.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">Can healthcare organizations partner with us?</h4>
+                    <p class="faq-answer">Absolutely! We're always looking for meaningful partnerships. Please contact us to discuss potential collaboration opportunities.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">How can I access the resources?</h4>
+                    <p class="faq-answer">Visit our Resources page to download educational materials, guides, and other helpful information about community health nursing.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">Do you offer certificates or credentials?</h4>
+                    <p class="faq-answer">Yes, students who complete the program receive certificates of completion and documentation of their community health service hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div data-include="../partials/footer.html"></div>
+
+    <script src="../js/includes.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

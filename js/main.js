@@ -82,6 +82,52 @@ if (document.readyState === 'loading') {
     initHeaderUI();
 }
 
+// ========== Dark Mode Toggle ==========
+function setDarkMode(enabled) {
+    if (enabled) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+function getDarkModePref() {
+    if (localStorage.getItem('darkMode') !== null) {
+        return localStorage.getItem('darkMode') === 'true';
+    }
+    // Default: match system preference
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+function initDarkModeToggle() {
+    const toggleBtn = document.getElementById('darkModeToggle');
+    if (!toggleBtn) return;
+    const img = toggleBtn.querySelector('img');
+    if (!img) return;
+    // Set initial state
+    setDarkMode(getDarkModePref());
+    toggleBtn.setAttribute('aria-pressed', getDarkModePref());
+    img.src = getDarkModePref() ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
+    img.alt = getDarkModePref() ? 'Sun icon' : 'Moon icon';
+    toggleBtn.addEventListener('click', () => {
+        const enabled = !document.body.classList.contains('dark-mode');
+        setDarkMode(enabled);
+        localStorage.setItem('darkMode', enabled);
+        toggleBtn.setAttribute('aria-pressed', enabled);
+        img.src = enabled ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
+        img.alt = enabled ? 'Sun icon' : 'Moon icon';
+    });
+}
+
+document.addEventListener('includes:loaded', () => {
+    initDarkModeToggle();
+});
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDarkModeToggle);
+} else {
+    initDarkModeToggle();
+}
+
 // ========== Scroll Animations ==========
 const observerOptions = {
     threshold: 0.1,

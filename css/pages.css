@@ -262,6 +262,8 @@
     transition: all var(--transition-normal);
     animation: slideUp 0.6s ease-out forwards;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-card:nth-child(1) { animation-delay: 0.1s; }
@@ -284,6 +286,9 @@
 }
 
 .blog-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: var(--spacing-lg);
 }
 
@@ -326,6 +331,7 @@
     align-items: center;
     padding-top: var(--spacing-md);
     border-top: 1px solid var(--border-color);
+    margin-top: auto;
 }
 
 .read-time {

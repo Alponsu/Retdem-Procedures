@@ -39,8 +39,7 @@
     --font-size-2xl: 2rem;
     --font-size-3xl: 2.5rem;
     --font-size-4xl: 3rem;
-    
-    /* Border Radius */
+        /* Border Radius */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
@@ -55,6 +54,65 @@
     --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* ========== Dark Mode ========== */
+.dark-mode {
+    --primary-dark: #0a101a;
+    --primary-blue: #16243a;
+    --primary-blue-deep: #0d1a2b;
+    --primary-teal: #00bcd4;
+    --primary-teal-rgb: 0, 188, 212;
+    --secondary-gray: #232b36;
+    --secondary-light: #181e29;
+    --secondary-dark-gray: #bfc9d1;
+    --accent-purple: #8f9eff;
+    --accent-purple-rgb: 143, 158, 255;
+    --accent-pink: #ff6f91;
+    --accent-cyan: #00e6ff;
+    --border-color: #2d3748;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    background-color: var(--secondary-light) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode a,
+.dark-mode span,
+.dark-mode strong,
+.dark-mode li,
+.dark-mode label{
+    color: var(--text-primary) !important;
+}
+
+.dark-mode span {
+    color: var(--primary-teal);
+}
+
+.dark-mode #darkModeToggle {
+    border: none;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background: var(--secondary-gray);
+}
+
+.dark-mode .btn-secondary {
+    background: var(--secondary-gray);
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.dark-mode .btn-secondary:hover {
+    background: var(--text-primary);
+    color: var(--secondary-light);
 }
 
 /* ========== Reset & Base Styles ========== */
@@ -144,6 +202,25 @@ a {
     font-size: 0.75rem;
     color: var(--secondary-dark-gray);
     font-weight: 600;
+}
+
+.nav-items {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items button {
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: var(--secondary-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-menu {
@@ -578,6 +655,10 @@ a {
 
     .hamburger {
         display: flex;
+    }
+
+    .nav-items {
+        justify-content: flex-end;
     }
 
     .hero-title {

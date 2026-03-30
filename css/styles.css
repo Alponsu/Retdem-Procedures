@@ -61,7 +61,7 @@
     --primary-dark: #0a101a;
     --primary-blue: #16243a;
     --primary-blue-deep: #0d1a2b;
-    --primary-teal: #00bcd4;
+    --primary-teal: #00a8b5;
     --primary-teal-rgb: 0, 188, 212;
     --secondary-gray: #232b36;
     --secondary-light: #181e29;
@@ -73,8 +73,8 @@
     --border-color: #2d3748;
     --text-primary: #e2e8f0;
     --text-secondary: #a0aec0;
-    background-color: var(--secondary-light) !important;
-    color: var(--text-primary) !important;
+    background-color: var(--secondary-light);
+    color: var(--text-primary);
 }
 
 .dark-mode h1,
@@ -88,12 +88,16 @@
 .dark-mode span,
 .dark-mode strong,
 .dark-mode li,
+.dark-mode span,
 .dark-mode label{
-    color: var(--text-primary) !important;
+    color: var(--text-primary)!important;
 }
 
-.dark-mode span {
-    color: var(--primary-teal);
+.dark-mode .header-subtitle,
+.dark-mode .hero-subtitle,
+.dark-mode .feature-card:hover h3,
+.dark-mode .footer-section h4 {
+    color: var(--primary-teal) !important;
 }
 
 .dark-mode #darkModeToggle {

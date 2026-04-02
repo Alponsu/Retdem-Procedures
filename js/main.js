@@ -85,10 +85,11 @@ if (document.readyState === 'loading') {
 // ========== Dark Mode Toggle ==========
 function setDarkMode(enabled) {
     if (enabled) {
-        document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');
     } else {
-        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
     }
+    localStorage.setItem('darkMode', enabled);
 }
 
 function getDarkModePref() {
@@ -110,9 +111,8 @@ function initDarkModeToggle() {
     img.src = getDarkModePref() ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
     img.alt = getDarkModePref() ? 'Sun icon' : 'Moon icon';
     toggleBtn.addEventListener('click', () => {
-        const enabled = !document.body.classList.contains('dark-mode');
+        const enabled = !document.documentElement.classList.contains('dark-mode');
         setDarkMode(enabled);
-        localStorage.setItem('darkMode', enabled);
         toggleBtn.setAttribute('aria-pressed', enabled);
         img.src = enabled ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
         img.alt = enabled ? 'Sun icon' : 'Moon icon';

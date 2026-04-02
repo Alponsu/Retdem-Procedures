@@ -61,7 +61,7 @@
     --primary-dark: #0a101a;
     --primary-blue: #16243a;
     --primary-blue-deep: #0d1a2b;
-    --primary-teal: #00a8b5;
+    --primary-teal: #00eeff;
     --primary-teal-rgb: 0, 188, 212;
     --secondary-gray: #232b36;
     --secondary-light: #181e29;
@@ -190,7 +190,7 @@ a {
 }
 
 .logo-icon img {
-    background-color: rgba(83, 255, 255, 0.281);
+    background-color: rgb(83, 255, 255);
     padding: 10px;
     border-radius: 10%;
     width: 60px;
@@ -453,7 +453,7 @@ a {
 }
 
 .feature-icon img {
-    background-color: rgba(83, 255, 255, 0.548);
+    background-color: rgb(83, 255, 255);
     padding: 10px;
     border-radius: 10%;
     width: 60px;

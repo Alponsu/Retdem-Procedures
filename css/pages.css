@@ -734,6 +734,9 @@
     border-radius: 50%;
     margin: 0 auto var(--spacing-lg);
     background: var(--secondary-gray);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .team-card h3 {

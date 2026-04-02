@@ -33,27 +33,26 @@
             <!-- Filters -->
             <div class="blog-filters">
                 <button class="filter-btn active" data-filter="all">All Articles</button>
-                <button class="filter-btn" data-filter="health">Health Initiatives</button>
-                <button class="filter-btn" data-filter="training">Training</button>
-                <button class="filter-btn" data-filter="community">Community</button>
-                <button class="filter-btn" data-filter="research">Research</button>
+                <button class="filter-btn" data-filter="main-blog">Main Blog</button>
+                <button class="filter-btn" data-filter="1st-sem">1st Sem RetDems</button>
+                <button class="filter-btn" data-filter="2nd-sem">2nd Sem RetDems</button>
             </div>
 
             <!-- Blog Grid -->
             <div class="blog-grid" id="blogGrid">
                 <!-- Sample Blog Cards -->
-                <article class="blog-card" data-category="health" data-article-id="screening-program">
+                <article class="blog-card" data-category="main-blog" data-article-id="main-blog">
                     <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span class="blog-category">Health Initiatives</span>
+                            <span class="blog-category">Main Blog</span>
                             <span class="blog-date">March 15, 2026</span>
                         </div>
                         <h3>Community Health Screening Program</h3>
                         <p>A comprehensive overview of our quarterly health screening initiative that serves over 100 community members with blood pressure checks, glucose tests, and health consultations.</p>
                         <div class="blog-footer">
                             <span class="read-time">8 min read</span>
-                            <a href="#article-reader" class="read-more" data-read-article="screening-program">Read Article →</a>
+                            <a href="#" class="read-more" data-read-article="screening-program">Read Article →</a>
                         </div>
                     </div>
                 </article>
@@ -69,7 +68,7 @@
                         <p>Learn about our intensive first aid and CPR training program designed to equip nursing students with life-saving skills and certification credentials.</p>
                         <div class="blog-footer">
                             <span class="read-time">6 min read</span>
-                            <a href="#article-reader" class="read-more" data-read-article="first-aid-cpr">Read Article →</a>
+                            <a href="#" class="read-more" data-read-article="first-aid-cpr">Read Article →</a>
                         </div>
                     </div>
                 </article>
@@ -85,7 +84,7 @@
                         <p>Discover how our students are preparing for disaster response situations through simulation training and community education programs.</p>
                         <div class="blog-footer">
                             <span class="read-time">7 min read</span>
-                            <a href="#article-reader" class="read-more" data-read-article="disaster-relief-preparedness">Read Article →</a>
+                            <a href="#" class="read-more" data-read-article="disaster-relief-preparedness">Read Article →</a>
                         </div>
                     </div>
                 </article>
@@ -101,7 +100,7 @@
                         <p>Our partnership with local hospitals to provide accessible vaccination services to underserved communities, reaching 200+ individuals.</p>
                         <div class="blog-footer">
                             <span class="read-time">9 min read</span>
-                            <a href="#article-reader" class="read-more" data-read-article="vaccination-campaign-2026">Read Article →</a>
+                            <a href="#" class="read-more" data-read-article="vaccination-campaign-2026">Read Article →</a>
                         </div>
                     </div>
                 </article>
@@ -117,7 +116,7 @@
                         <p>Analysis of patient satisfaction and health outcomes from our RetDem activities, showcasing the positive impact of student-led healthcare services.</p>
                         <div class="blog-footer">
                             <span class="read-time">10 min read</span>
-                            <a href="#article-reader" class="read-more" data-read-article="care-outcomes-study">Read Article →</a>
+                            <a href="#" class="read-more" data-read-article="care-outcomes-study">Read Article →</a>
                         </div>
                     </div>
                 </article>
@@ -133,23 +132,11 @@
                         <p>Essential communication skills training for nursing students to improve patient interactions and build trust with community members.</p>
                         <div class="blog-footer">
                             <span class="read-time">6 min read</span>
-                            <a href="#article-reader" class="read-more" data-read-article="communication-workshop">Read Article →</a>
+                            <a href="#" class="read-more" data-read-article="communication-workshop">Read Article →</a>
                         </div>
                     </div>
                 </article>
             </div>
-
-            <!-- Article Reader (populated by JavaScript) -->
-            <section class="article-reader" id="article-reader" hidden>
-                <div class="article-reader-container" tabindex="-1" id="articleReader">
-                    <div class="article-reader-actions">
-                        <button type="button" class="btn btn-secondary" id="closeArticle">Back to Articles</button>
-                    </div>
-                    <h2 class="article-reader-title" id="articleTitle"></h2>
-                    <div class="article-reader-meta" id="articleMeta"></div>
-                    <div class="article-reader-body" id="articleBody"></div>
-                </div>
-            </section>
         </div>
     </section>
 

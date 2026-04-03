@@ -20,94 +20,139 @@
     <div data-include="../partials/header.html"></div>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <!-- <section class="page-header">
         <div class="header-content">
             <h1 class="header-title">Blog & Articles</h1>
             <p class="header-subtitle">Stories and insights from our community health initiatives</p>
         </div>
-    </section>
+    </section> -->
 
     <!-- Blog Section -->
     <section class="blog-section">
         <div class="blog-container">
-            <!-- Filters -->
-            <div class="blog-filters">
-                <button class="filter-btn active" data-filter="all">All Articles</button>
-                <button class="filter-btn" data-filter="1st-sem">1st Sem RetDems</button>
-                <button class="filter-btn" data-filter="2nd-sem">2nd Sem RetDems</button>
-            </div>
 
-            <!-- Blog Grid -->
-            <div class="blog-grid" id="blogGrid">
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <div class="blog-sidebar-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Categories
+                </div>
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">All Articles</button>
+                    <button class="filter-btn" data-filter="1st-sem">1st Sem RetDems</button>
+                    <button class="filter-btn" data-filter="2nd-sem">2nd Sem RetDems</button>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="blog-main-content">
+                <h1 class="blog-main-title">All Articles</h1>
+                <div class="blog-divider"></div>
+
+                <!-- Top Row (Spotlight & Trending) -->
+                <div class="blog-top-row">
+
+                    <!-- Spotlight -->
+                    <div class="blog-spotlight">
+                        <div class="section-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            Spotlight
+                        </div>
+                        
+                        <article class="spotlight-card" data-category="spotlight">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #FFC107 0%, #F57F17 100%);">
+                                <span class="spotlight-badge">CASE STUDIES</span>
+                            </div>
+                            <h3>Return Demonstration: Requirement or Real Preparation?</h3>
+                            <div class="author-info">
+                                <div class="author-avatar" style="background-image: url('https://i.pravatar.cc/32?img=5'); background-size: cover;"></div>
+                                <span>Sakshi Maheshwari</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="topRowSpacer"><br><br></div>
+
+                <!-- Category Grid -->
+                <div class="blog-grid category-grid" id="1stSemGrid">
+                    <!-- 1st Sem Header -->
+                    <div class="category-header" data-header-category="1st-sem">
+                        <h3>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            1st Sem RetDems
+                        </h3>
+                        <button class="read-more-btn" data-target="1st-sem">Read More &rarr;</button>
+                    </div>
                 
-                <!-- 1st Sem RetDems -->
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
+                    <!-- 1st Sem RetDems -->
+                    <article class="blog-card" data-category="1st-sem">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #FFC107 0%, #F57F17 100%);"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">1st Sem RetDem</span>
+                                <span class="blog-date">[Date]</span>
+                            </div>
+                            <h3>Fundic Height Measurement and Leopold's Maneuver</h3>
+                            <p>[Brief description placeholder]</p>
+                            <div class="blog-footer">
+                                <span class="read-time">[X] min read</span>
+                                <a href="#" class="read-more">Read Article →</a>
+                            </div>
                         </div>
-                        <h3>Fundic Height Measurement and Leopold's Maneuver</h3>
-                        <p>[Brief description placeholder for Fundic Height Measurement and Leopold's Maneuver]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
+                    <article class="blog-card" data-category="1st-sem">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">1st Sem RetDem</span>
+                                <span class="blog-date">[Date]</span>
+                            </div>
+                            <h3>Female Catheterization</h3>
+                            <p>[Brief description placeholder]</p>
+                            <div class="blog-footer">
+                                <span class="read-time">[X] min read</span>
+                                <a href="#" class="read-more">Read Article →</a>
+                            </div>
                         </div>
-                        <h3>Female Catheterization</h3>
-                        <p>[Brief description placeholder for Female Catheterization]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
+                    <article class="blog-card" data-category="1st-sem">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #fcedc5 0%, #fbd5c0 100%);"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">1st Sem RetDem</span>
+                                <span class="blog-date">[Date]</span>
+                            </div>
+                            <h3>Capillary Blood Glucose (CBG) Testing</h3>
+                            <p>[Brief description placeholder]</p>
+                            <div class="blog-footer">
+                                <span class="read-time">[X] min read</span>
+                                <a href="#" class="read-more">Read Article →</a>
+                            </div>
                         </div>
-                        <h3>Capillary Blood Glucose (CBG) Testing</h3>
-                        <p>[Brief description placeholder for CBG Testing]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
+                    <article class="blog-card" data-category="1st-sem">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #e3f2fd 0%, #cbd5e0 100%);"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">1st Sem RetDem</span>
+                                <span class="blog-date">[Date]</span>
+                            </div>
+                            <h3>Essential Intrapartal Newborn Care (EINC) with Ophthalmic Ointment, IM Medication Administration & Breastfeeding Initiation</h3>
+                            <p>[Brief description placeholder]</p>
+                            <div class="blog-footer">
+                                <span class="read-time">[X] min read</span>
+                                <a href="#" class="read-more">Read Article →</a>
+                            </div>
                         </div>
-                        <h3>Essential Intrapartal Newborn Care (EINC)</h3>
-                        <p>[Brief description placeholder for EINC with Ophthalmic Ointment, IM Medication Administration & Breastfeeding Initiation]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="blog-content">
+                    <article class="blog-card" data-category="1st-sem">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                        <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">1st Sem RetDem</span>
                             <span class="blog-date">[Date]</span>
@@ -168,6 +213,20 @@
                         </div>
                     </div>
                 </article>
+
+                </div>
+                
+                <div id="middleSpacer"><br><br></div>
+
+                <div class="blog-grid category-grid" id="2ndSemGrid">
+                <!-- 2nd Sem Header -->
+                <div class="category-header" data-header-category="2nd-sem">
+                    <h3>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        2nd Sem RetDems
+                    </h3>
+                    <button class="read-more-btn" data-target="2nd-sem">Read More &rarr;</button>
+                </div>
 
                 <!-- 2nd Sem RetDems -->
                 <article class="blog-card" data-category="2nd-sem">
@@ -313,8 +372,10 @@
                         </div>
                     </div>
                 </article>
-            </div>
-        </div>
+            </div> <!-- End of Category Grid -->
+
+            </div> <!-- End of Main Content Area -->
+        </div> <!-- End of Container -->
     </section>
 
     <!-- Footer -->

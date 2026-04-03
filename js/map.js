@@ -2,58 +2,36 @@
 const locations = [
     {
         id: 1,
-        name: 'Retention Basin A',
-        location: 'Downtown District',
-        lat: 14.5995,
-        lng: 120.9842,
-        activity: 'Site Assessment',
-        description: 'Initial assessment and basic hydrology notes for the basin site.',
-        visits: 3,
-        beneficiaries: 0
+        name: 'Easy Med Pharmacy And General Merchandise',
+        location: 'San Rafael, Bulacan',
+        lat: 15.002401969587348,
+        lng: 120.93170537256697,
+        // activity: 'Site Assessment',
+        description: 'Located in San Rafael, Bulacan, this establishment serves as both a pharmacy and a general retailer, making it a practical resource for nursing students in the area. It is a convenient source for basic medical materials such as gauze, bandages, surgical tapes, and antiseptic solutions needed for wound care or sterile technique demonstrations. Beyond strictly medical items, the general merchandise aspect of the shop may provide other miscellaneous items sometimes required for community health bags or bedside care setups.',
+        // visits: 3,
+        // beneficiaries: 0
     },
     {
         id: 2,
-        name: 'Detention Pond North',
-        location: 'North Valley',
-        lat: 14.6760,
-        lng: 121.0437,
-        activity: 'Design Review',
-        description: 'Review of inlet/outlet design and stormwater routing assumptions.',
-        visits: 2,
-        beneficiaries: 0
+        name: 'Greenwell Pharmacy and Medical Supplies',
+        location: 'Diliman I Road, San Rafael, Bulacan',
+        lat: 15.024399851311257,
+        lng: 120.95043935384234,
+        // activity: 'Design Review',
+        description: 'The Greenwell Pharmacy and Medical Supplies, is located on Diliman I Road in San Rafael, Bulacan. This is an excellent resource specifically because it focuses on both pharmaceutical and medical equipment. You can likely find fundamental nursing tools such as stethoscopes, sphygmomanometers (blood pressure cuffs), and digital thermometers. It typically stocks specialized items like sterile gloves, surgical scissors, forceps, and various dressings that are essential for demonstrating wound dressing or suture care. The shop is a reliable source for high-quality disinfectants, alcohol, and PPE that meet the standards required for clinical grading.',
+        // visits: 2,
+        // beneficiaries: 0
     },
     {
         id: 3,
-        name: 'Spillway Demo Site',
-        location: 'Central Area',
-        lat: 14.5547,
-        lng: 121.0244,
-        activity: 'Construction Demo',
-        description: 'Construction method walkthrough for spillway and embankment components.',
-        visits: 4,
-        beneficiaries: 0
-    },
-    {
-        id: 4,
-        name: 'Sediment Control Basin',
-        location: 'East Side',
-        lat: 14.6507,
-        lng: 121.1029,
-        activity: 'Maintenance Check',
-        description: 'Inspection checklist for sediment build-up and maintenance schedule planning.',
-        visits: 1,
-        beneficiaries: 0
-    },
-    {
-        id: 5,
-        name: 'Community Flood Buffer',
-        location: 'West End',
-        lat: 14.5639,
-        lng: 120.9943,
-        activity: 'Safety Briefing',
-        description: 'Safety and environmental considerations briefing for nearby residents.',
-        visits: 2,
-        beneficiaries: 0
+        name: 'MTMC Medical Supplies',
+        location: 'Baliwag, Bulacan',
+        lat: 14.969969826880824,
+        lng: 120.8961664654779,
+        // activity: 'Construction Demo',
+        description: 'Located along Benigno S. Aquino Avenue in Baliwag, Bulacan. This local pharmacy and Medical Supplies store is a practical stop for students needing medical supplies in a central, accessible location in the areas of Baliwag and San Rafael. You can find essential "dry" supplies like sterile gauze, adhesive bandages, and medical tape, which are frequently required for wound care and dressing change demonstrations.',
+        // visits: 4,
+        // beneficiaries: 0
     }
 ];
 

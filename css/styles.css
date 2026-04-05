@@ -150,7 +150,7 @@
 }
 
 .dark-mode .spotlight-badge {
-    background: var(--primary-teal) !important;
+    background: var(--secondary-gray) !important;
     color: #fff !important;
 }
 
@@ -165,8 +165,8 @@
 }
 
 .dark-mode .filter-btn.active {
-    background: var(--primary-teal);
-    color: #fff !important;
+    background: var(--secondary-dark-gray);
+    color: #000000 !important;
 }
 
 .dark-mode .category-header h3 {

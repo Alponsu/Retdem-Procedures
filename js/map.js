@@ -122,6 +122,13 @@ function renderLocations() {
         locations.forEach(loc => {
             locationsList.appendChild(createLocationItem(loc));
         });
+
+        // Add scroll class if more than 3 locations
+        if (locations.length > 3) {
+            locationsList.classList.add('scrollable');
+        } else {
+            locationsList.classList.remove('scrollable');
+        }
     }
 
     if (locationsGrid) {

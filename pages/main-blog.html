@@ -283,7 +283,7 @@
 
             <aside class="article-sidebar">
                 <div class="toc">
-                    <h4>Contents</h4>
+                    <h3>Contents</h3>
                     <ul id="toc-list"></ul>
                 </div>
             </aside>
@@ -419,23 +419,55 @@
 
         // Add table of contents functionality
         const headings = document.querySelectorAll('.article-content h2');
+        const tocLinks = [];
+
         headings.forEach(heading => {
             const id = heading.textContent.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
             heading.id = id;
         });
 
-        // 
+        // Create TOC list
         const tocList = document.getElementById('toc-list');
-        headings.forEach(heading => {
+        headings.forEach((heading, index) => {
             const li = document.createElement('li');
             const a = document.createElement('a');
 
             a.textContent = heading.textContent;
             a.href = `#${heading.id}`;
+            a.dataset.headingIndex = index;
 
             li.appendChild(a);
             tocList.appendChild(li);
+            tocLinks.push(a);
         });
+
+        // Function to update active TOC link
+        function updateActiveTocLink() {
+            const scrollPosition = window.scrollY + 130; // Offset for headers (slightly more than scroll-margin-top)
+
+            // Find the heading that's currently in view
+            let currentHeadingIndex = -1;
+            headings.forEach((heading, index) => {
+                const headingTop = heading.offsetTop;
+                if (scrollPosition >= headingTop) {
+                    currentHeadingIndex = index;
+                }
+            });
+
+            // Remove active class from all links
+            tocLinks.forEach(link => link.classList.remove('active'));
+
+            // Add active class to current link
+            if (currentHeadingIndex >= 0 && tocLinks[currentHeadingIndex]) {
+                tocLinks[currentHeadingIndex].classList.add('active');
+            }
+        }
+
+        // Update active link on scroll
+        window.addEventListener('scroll', updateActiveTocLink);
+
+        // Update active link on page load
+        updateActiveTocLink();
     </script>
     <script src="../js/main.js"></script>
 </body>

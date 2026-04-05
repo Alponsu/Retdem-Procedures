@@ -254,6 +254,7 @@ p {
     padding-bottom: var(--spacing-md);
     border-bottom: 3px solid var(--primary-teal);
     display: inline-block;
+    scroll-margin-top: 120px; /
 }
 
 .article-content h3 {
@@ -261,6 +262,7 @@ p {
     font-size: 1.3rem;
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
+    scroll-margin-top: 120px; 
 }
 
 .article-content strong {

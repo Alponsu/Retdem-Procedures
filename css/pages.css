@@ -43,9 +43,10 @@
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    height: fit-content;
+    min-height: 600px;
     position: sticky;
     top: var(--spacing-lg);
+    overflow-y: auto;
 }
 
 .search-box {
@@ -76,6 +77,12 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+}
+
+.locations-list.scrollable {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: var(--spacing-sm);
 }
 
 .location-item {

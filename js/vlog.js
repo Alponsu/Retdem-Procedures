@@ -40,7 +40,6 @@ vlogCards.forEach(card => {
         const videoId = card.getAttribute('data-video-id');
         const title = card.querySelector('h3').textContent;
         const description = card.querySelector('p').textContent;
-        const date = card.querySelector('.vlog-stats span:last-child').textContent;
 
         if (featuredVideo) {
             featuredVideo.src = `https://www.youtube.com/embed/${videoId}`;
@@ -50,9 +49,6 @@ vlogCards.forEach(card => {
         }
         if (document.getElementById('featureDescription')) {
             document.getElementById('featureDescription').textContent = description;
-        }
-        if (document.getElementById('featureDate')) {
-            document.getElementById('featureDate').textContent = date;
         }
 
         if (videoModal) {

@@ -106,7 +106,7 @@
 }
 
 .dark-mode #darkModeToggle:hover {
-    background: var(--secondary-gray);
+    background: var(--secondary-dark-gray);
 }
 
 .dark-mode .btn-secondary {
@@ -304,6 +304,10 @@ a {
     justify-content: center;
 }
 
+.nav-items button .fa-moon {
+    color: var(--secondary-dark-gray);
+}
+
 .nav-menu {
     display: flex;
     gap: var(--spacing-lg);
@@ -458,9 +462,12 @@ a {
 }
 
 .btn-secondary:hover {
-    background: var(--secondary-light);
-    color: var(--primary-blue);
+    background: var(--secondary-dark-gray);
     transform: translateY(-2px);
+}
+
+.btn-secondary:hover .fa-moon{
+    color: var(--secondary-light-gray);
 }
 
 /* ========== Features Section ========== */

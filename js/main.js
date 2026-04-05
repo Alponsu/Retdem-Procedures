@@ -103,19 +103,29 @@ function getDarkModePref() {
 function initDarkModeToggle() {
     const toggleBtn = document.getElementById('darkModeToggle');
     if (!toggleBtn) return;
-    const img = toggleBtn.querySelector('img');
-    if (!img) return;
+    const icon = toggleBtn.querySelector('i');
+    if (!icon) return;
+
+    function updateIcon(isDarkMode) {
+        if (isDarkMode) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+        toggleBtn.setAttribute('aria-pressed', isDarkMode);
+    }
+
     // Set initial state
-    setDarkMode(getDarkModePref());
-    toggleBtn.setAttribute('aria-pressed', getDarkModePref());
-    img.src = getDarkModePref() ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
-    img.alt = getDarkModePref() ? 'Sun icon' : 'Moon icon';
+    const initialDarkMode = getDarkModePref();
+    setDarkMode(initialDarkMode);
+    updateIcon(initialDarkMode);
+
     toggleBtn.addEventListener('click', () => {
         const enabled = !document.documentElement.classList.contains('dark-mode');
         setDarkMode(enabled);
-        toggleBtn.setAttribute('aria-pressed', enabled);
-        img.src = enabled ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
-        img.alt = enabled ? 'Sun icon' : 'Moon icon';
+        updateIcon(enabled);
     });
 }
 
@@ -158,6 +168,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// (Navigation outside-click handler moved into initNavigation so it
-// binds after injected header elements exist.)

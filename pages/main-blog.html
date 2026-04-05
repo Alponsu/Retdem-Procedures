@@ -11,6 +11,14 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/blog-article.css">
+    <script>
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'true') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -341,8 +349,7 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // Fetch and insert header, then apply navbar styles
-        fetch('../../partials/header.html')
+        fetch('../partials/header.html')
             .then(response => response.text())
             .then(data => {
                 const headerPlaceholder = document.getElementById('header-placeholder');
@@ -352,11 +359,12 @@
                     headerPlaceholder.className = nav.className;
                     nav.className = ''; // Remove class from child to avoid conflict
                 }
+
                 initDarkModeToggle();
+                initNavigation();
             });
 
-        // Fetch and insert footer
-        fetch('../../partials/footer.html')
+        fetch('../partials/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
@@ -418,44 +426,8 @@
             const id = heading.textContent.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
             heading.id = id;
         });
-
-        // ========== Dark Mode Toggle ==========
-        function setDarkMode(enabled) {
-            if (enabled) {
-                document.documentElement.classList.add('dark-mode');
-            } else {
-                document.documentElement.classList.remove('dark-mode');
-            }
-            localStorage.setItem('darkMode', enabled);
-        }
-
-        function getDarkModePref() {
-            if (localStorage.getItem('darkMode') !== null) {
-                return localStorage.getItem('darkMode') === 'true';
-            }
-            // Default: match system preference
-            return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        }
-
-        function initDarkModeToggle() {
-            const toggleBtn = document.getElementById('darkModeToggle');
-            if (!toggleBtn) return;
-            const img = toggleBtn.querySelector('img');
-            if (!img) return;
-            // Set initial state
-            setDarkMode(getDarkModePref());
-            toggleBtn.setAttribute('aria-pressed', getDarkModePref());
-            img.src = getDarkModePref() ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
-            img.alt = getDarkModePref() ? 'Sun icon' : 'Moon icon';
-            toggleBtn.addEventListener('click', () => {
-                const enabled = !document.documentElement.classList.contains('dark-mode');
-                setDarkMode(enabled);
-                toggleBtn.setAttribute('aria-pressed', enabled);
-                img.src = enabled ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
-                img.alt = enabled ? 'Sun icon' : 'Moon icon';
-            });
-        }
     </script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

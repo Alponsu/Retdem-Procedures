@@ -32,6 +32,50 @@ const locations = [
         description: 'Located along Benigno S. Aquino Avenue in Baliwag, Bulacan. This local pharmacy and Medical Supplies store is a practical stop for students needing medical supplies in a central, accessible location in the areas of Baliwag and San Rafael. You can find essential "dry" supplies like sterile gauze, adhesive bandages, and medical tape, which are frequently required for wound care and dressing change demonstrations.',
         // visits: 4,
         // beneficiaries: 0
+    },
+    {
+        id: 4,
+        name: 'Bulacan State University - San Rafael Campus (BSU SRC)',
+        location: 'San Rafael, Bulacan',
+        lat: 15.013673162779748,
+        lng: 120.94495279800283,
+        // activity: 'Construction Demo',
+        description: 'University in San Rafael, Bulacan is an academic institution that provides an integrated higher education with the growing healthcare in the region. For those in the medical and nursing fields,  the university’s campus provides a modern academic environment where nursing theories, anatomy and physiology, and clinical foundations are taught. The facilities are designed to provide classroom learning and practical application, often featuring simulation laboratories where students can master return demonstrations for skills before entering their clinical rotations. As a state-funded university, it emphasizes community-based health programs and evidence-based practice, preparing students to meet the rigorous standards of professional licensure and hospital duty.'
+        // visits: 4,
+        // beneficiaries: 0
+    },
+    {
+        id: 5,
+        name: 'R. De C. Galvez Medical Center, Inc.',
+        location: 'Cagayan Valley Road of San Ildefonso Bulacan',
+        lat: 15.080568631821702,
+        lng: 120.94019052498493,
+        // activity: 'Construction Demo',
+        description: 'This private hospital can be found at Cagayan Valley Road of San Ildefonso Bulacan, it provides a full-service hospital and a vital training ground for clinical practices. As a secondary care facility, it provides an environment for vital learning of practicing student nurses for inpatient management, emergency interventions, and surgical procedure. It is an ideal setting for mastering professional nursing competencies.'
+        // visits: 4,
+        // beneficiaries: 0
+    },
+    {
+        id: 6,
+        name: 'Bulacan Medical Center',
+        location: '99 Potenciano Street in Malolos, Bulacan',
+        lat: 14.858861667452457, 
+        lng: 120.81658968079955,
+        // activity: 'Construction Demo',
+        description: 'This Bulacan Medical Center (BMC) is a government-owned tertiary hospital located at 99 Potenciano Street in Malolos, Bulacan serves as the main foundational training center for healthcare professionals in the region. As a Level 3 DOH accredited facility, it promotes a clinical environment that one can gain hands-on experience such as Intensive Care Unit (ICU), Neonatal ICU (NICU), and modern Outpatient Department (OPD).'
+        // visits: 4,
+        // beneficiaries: 0
+    },
+    {
+        id: 7,
+        name: 'Twin Care Hospital Incorporated',
+        location: 'Tapatan Road in Marungko, Angat, Bulacan',
+        lat: 14.945280110597121, 
+        lng: 121.0097486961465,
+        // activity: 'Construction Demo',
+        description: 'Located along the road side of Tapatan Road in Marungko, Angat, Bulacan is a private healthcare institution that provides a secondary level clinical care. It provides an excellent setting for developing core nursing competencies in General Medicine, Maternal and Child Health, and Emergency Services. The facility’s layout and community focus allow for a high level of direct patient interaction, making it an ideal location to practice therapeutic communication and systematic nursing documentation within a professional healthcare team.'
+        // visits: 4,
+        // beneficiaries: 0
     }
 ];
 

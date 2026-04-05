@@ -227,7 +227,7 @@ p {
 
 /* ========== Article Content ========== */
 .article-content {
-    background: white;
+    /* background: white; */
     /* padding: var(--spacing-2xl);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color); */
@@ -516,7 +516,7 @@ p {
 
 /* ========== TOC Styles ========== */
 .article-sidebar .toc {
-    background: #ffffff;
+    background: white;
     border-radius: 16px;
     padding: 1.5rem;
 
@@ -553,7 +553,7 @@ p {
 
     text-decoration: none;
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: var(--text-primary); 
 
     transition: all 0.25s ease;
 }
@@ -710,10 +710,14 @@ p {
         0 8px 24px rgba(0,0,0,0.4);
 }
 
+.dark-mode .toc h3 {
+    color: var(--text-primary);
+}
+
 @media (prefers-color-scheme: dark) {
     .blog-header {
         backdrop-filter: blur(10px) saturate(180%);
-        background-color: rgba(10, 16, 26, 0.75);
+        background-color: var(--secondary-light);
     }
 
     .back-button:hover {
@@ -738,7 +742,7 @@ p {
     .article-content,
     .share-section,
     .related-card {
-        background: var(--primary-blue);
+        background: var(--secondary-light);
         border-color: var(--border-color);
     }
 

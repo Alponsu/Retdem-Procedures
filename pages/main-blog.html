@@ -282,13 +282,9 @@
             </article>
 
             <aside class="article-sidebar">
-                <!-- Author Information -->
-                <div class="article-author-info">
-                    <div class="author-avatar">👩‍⚕️</div>
-                    <div class="author-details">
-                        <h4>RetDem Team</h4>
-                        <p>Nursing Education Specialists</p>
-                    </div>
+                <div class="toc">
+                    <h4>Contents</h4>
+                    <ul id="toc-list"></ul>
                 </div>
             </aside>
         </div>
@@ -426,6 +422,19 @@
         headings.forEach(heading => {
             const id = heading.textContent.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
             heading.id = id;
+        });
+
+        // 
+        const tocList = document.getElementById('toc-list');
+        headings.forEach(heading => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+
+            a.textContent = heading.textContent;
+            a.href = `#${heading.id}`;
+
+            li.appendChild(a);
+            tocList.appendChild(li);
         });
     </script>
     <script src="../js/main.js"></script>

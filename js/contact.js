@@ -3,7 +3,7 @@ const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
         const formData = new FormData(this);
@@ -38,9 +38,9 @@ if (contactForm) {
 
         setTimeout(() => {
             showMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
-            
+
             contactForm.reset();
-            
+
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
 
@@ -56,7 +56,7 @@ function showMessage(message, type) {
     if (formMessage) {
         formMessage.textContent = message;
         formMessage.className = 'form-message ' + type;
-        
+
         setTimeout(() => {
             formMessage.className = 'form-message';
         }, 5000);
@@ -67,10 +67,10 @@ function showMessage(message, type) {
 const faqQuestions = document.querySelectorAll('.faq-question');
 
 faqQuestions.forEach(question => {
-    question.addEventListener('click', function() {
+    question.addEventListener('click', function () {
         const faqItem = this.parentElement;
         const answer = faqItem.querySelector('.faq-answer');
-        
+
         faqItem.classList.toggle('active');
         answer.classList.toggle('show');
     });

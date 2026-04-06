@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Earth Integration - Nursing RetDem</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""
-    >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
-        (function() {
+        (function () {
             const darkMode = localStorage.getItem('darkMode');
             if (darkMode === 'true') {
                 document.documentElement.classList.add('dark-mode');
             }
         })();
     </script>
+    <link rel="icon" type="image/png" href="../assets/icons/nurse.png">
 </head>
+
 <body>
     <!-- Navigation -->
-    <div data-include="../partials/header.html"></div>
+    <div class="navbar" data-include="../partials/header.html"></div>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <!-- <section class="page-header">
         <div class="header-content">
             <h1 class="header-title">Google Earth Integration</h1>
             <p class="header-subtitle">Explore all RetDem activity locations worldwide</p>
         </div>
-    </section>
+    </section> -->
 
     <!-- Map Section -->
     <section class="map-section">
+            <h2 class="section-title">RetDem Locations</h2>
+            <p class="section-subtitle">Explore all RetDem activity locations nearby</p>
         <div class="map-container-full">
             <div class="search-sidebar">
                 <div class="search-box">
-                    <input 
-                        type="text" 
-                        id="searchInput" 
-                        placeholder="Search locations..." 
-                        class="search-input"
-                    >
+                    <input type="text" id="searchInput" placeholder="Search locations..." class="search-input">
                 </div>
-                
+
                 <div class="featured-locations">
                     <h3>Featured Locations</h3>
                     <div class="locations-list" id="locationsList">
@@ -56,34 +55,42 @@
 
             <div class="map-wrapper">
                 <div id="map" class="map"></div>
-                <div class="map-info" id="mapInfo">
+                <!-- <div class="map-info" id="mapInfo">
                     <div class="location-icon">📍</div>
                     <p>Click on a marker to see details</p>
+                </div> -->
+            </div>
+
+            <div class="location-description-sidebar">
+                <div class="description-content empty-slate" id="locationDescription">
+                    <h3>Location Details</h3>
+                    <p>Select a location from the list to see more details here.</p>
                 </div>
+                <!-- <div class="description-footer">
+                    <a href="about.html#locations" class="btn-view-all">View All Locations</a>
+                </div> -->
             </div>
         </div>
     </section>
 
     <!-- Locations Details Section -->
-    <section class="locations-grid-section">
+    <!-- <section class="locations-grid-section">
         <div class="locations-container">
             <h2 class="section-title">All RetDem Locations</h2>
             <div class="locations-grid" id="locationsGrid">
-                <!-- Populated by JavaScript -->
+                
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <div data-include="../partials/footer.html"></div>
 
     <script src="../js/includes.js"></script>
     <script src="../js/main.js"></script>
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="../js/map.js"></script>
 </body>
+
 </html>

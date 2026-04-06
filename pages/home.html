@@ -7,84 +7,150 @@
     <title>RetDem Procedures</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script>
-        (function() {
+        (function () {
             const darkMode = localStorage.getItem('darkMode');
             if (darkMode === 'true') {
                 document.documentElement.classList.add('dark-mode');
             }
         })();
     </script>
+    <link rel="icon" type="image/png" href="../assets/icons/nurse.png">
 </head>
 
 <body class="home">
-    <div data-include="../partials/header.html"></div>
+    <div class="navbar" data-include="../partials/header.html"></div>
 
     <header class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">RetDem Procedures</h1>
-            <p class="hero-subtitle">Your comprehensive guide to understanding, designing, and implementing retention
-                dam systems.</p>
+            <h1 class="hero-title">Return Demonstration</h1>
+            <p class="hero-subtitle">"Observation tells us what the condition of the patient is, reflection tells what is to be done, practical skill tells how to do it." <br>— Florence Nightingale</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="window.location.href='google-earth.html'">Explore Maps →</button>
-                <button class="btn btn-secondary" onclick="window.location.href='blog.html'">Read Articles →</button>
+                <button class="btn btn-primary" onclick="window.location.href='vlog.html'">Watch Tutorials
+                    →</button>
+                <button class="btn btn-secondary" onclick="window.location.href='blog.html'">Explore Articles →</button>
             </div>
         </div>
     </header>
 
-    <section class="features" id="features">
+    <section class="features fade-up" id="features">
         <div class="features-container">
-            <h2 class="section-title">Everything You Need to Learn</h2>
-            <h3 class="section-subtitle">Access comprehensive resources including interactive maps, detailed articles,
-                and video tutorials.</h3>
+            <h2 class="section-title">Comprehensive Learning Resources</h2>
+            <h3 class="section-subtitle">Enhance your clinical skills through our curated collections of instructional videos, insightful articles, and community activity maps.</h3>
             <div class="features-grid">
-                <div class="feature-card"><a href="google-earth.html">
-                    <div class="feature-icon"><img src="../assets/icons/earth-globe.png" alt="Google Earth Icon"></div>
-                    <h3>Google Earth Integration</h3>
-                    <p>Explore all our redemption activities across different locations worldwide.</p>
-                    <a href="google-earth.html" class="feature-link">View Map →</a>
-                </div></a>
-                <div class="feature-card"><a href="blog.html">
-                    <div class="feature-icon"><img src="../assets/icons/blogging.png" alt="Blog Icon"></div>
-                    <h3>Blog & Articles</h3>
-                    <p>Read detailed articles about our community service initiatives and healthcare insights.</p>
-                    <a href="blog.html" class="feature-link">Read More →</a>
-                </div></a>
-                <div class="feature-card"><a href="vlog.html">
-                    <div class="feature-icon"><img src="../assets/icons/tutorial.png" alt="Video Tutorials Icon"></div>
-                    <h3>Video Tutorials</h3>
-                    <p>Watch compelling videos showcasing our nursing students in action.</p>
-                    <a href="vlog.html" class="feature-link">Learn More →</a>
-                </div></a>
+                <div class="feature-card delay-1"><a href="google-earth.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon"><i class="fa-solid fa-earth-asia"></i></div>
+                        <h3>RetDem Locations</h3>
+                        <p>Explore an interactive map showcasing our community healthcare locations.</p>
+                        <span class="feature-link">View Map →</span>
+                </a></div>
+                <div class="feature-card delay-2"><a href="blog.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon"><i class="fa-solid fa-book-medical"></i></div>
+                        <h3>RetDem Blogs</h3>
+                        <p>Read detailed articles covering essential nursing procedures, patient care best practices, and knowledge checks.</p>
+                        <span class="feature-link">Read More →</span>
+                </a></div>
+                <div class="feature-card delay-3"><a href="vlog.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon"><i class="fa-solid fa-clapperboard"></i></div>
+                        <h3>Video Tutorials</h3>
+                        <p>Watch detailed video demonstrations of nursing students performing critical procedures step-by-step.</p>
+                        <span class="feature-link">Learn More →</span>
+                </a></div>
             </div>
         </div>
     </section>
 
-    <section class="info-section" id="info-section">
+    <!-- Statistics Section -->
+    <!-- <section class="stats-section fade-up">
+        <div class="stats-grid">
+            <div class="stat-item fade-up delay-1">
+                <h3>15+</h3>
+                <p>Core Procedures</p>
+            </div>
+            <div class="stat-item fade-up delay-2">
+                <h3>50+</h3>
+                <p>Training Videos</p>
+            </div>
+            <div class="stat-item fade-up delay-3">
+                <h3>100%</h3>
+                <p>Hands-on Readiness</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Modules Preview Section -->
+    <section class="modules-section fade-up" id="modules">
+        <h2 class="section-title" style="text-align: center;">Featured Clinical Modules</h2>
+        <h3 class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Dive specialized domains from maternal care to emergency life support.</h3>
+        <div class="modules-grid">
+            <a href="intravenous.html" class="module-card fade-up delay-1">
+                <div class="module-icon"><i class="fa-solid fa-syringe"></i></div>
+                <h3>Intravenous Therapy</h3>
+                <p>Master insertion, monitoring, and discontinuing IV lines along with safe medication administration.</p>
+            </a>
+            <a href="blood.html" class="module-card fade-up delay-2">
+                <div class="module-icon"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Blood Transfusion</h3>
+                <p>Learn the exact protocols for blood typing, patient verifications, and transfusion management.</p>
+            </a>
+            <a href="catheterization.html" class="module-card fade-up delay-3">
+                <div class="module-icon"><i class="fa-solid fa-vial"></i></div>
+                <h3>Urinary Catheterization</h3>
+                <p>Understand the sterile setup and precise insertion procedures for patient safety and infection control.</p>
+            </a>
+            <a href="einc.html" class="module-card fade-up delay-1">
+                <div class="module-icon"><i class="fa-solid fa-baby-carriage"></i></div>
+                <h3>EINC & Maternal Care</h3>
+                <p>Practice Essential Intrapartum and Newborn Care protocols and critical assessments like Fundic Height.</p>
+            </a>
+            <a href="cardio.html" class="module-card fade-up delay-2">
+                <div class="module-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>Emergency Procedures</h3>
+                <p>Revise life-saving algorithms including infant CPR, rapid response, and vital signs monitoring.</p>
+            </a>
+            <a href="administering-meds.html" class="module-card fade-up delay-3">
+                <div class="module-icon"><i class="fa-solid fa-pills"></i></div>
+                <h3>Administering Meds</h3>
+                <p>Learn the proper protocols for administering oral, topical, and injectable medications safely.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="info-section fade-up" id="info-section">
         <div class="info-container">
             <div class="info-left">
-                <h2>What is Retention Dam?</h2>
+                <h2>Why Return Demonstrations Matter</h2>
                 <p>
-                    A retention dam, also known as a retention basin or detention dam, is a structure designed to
-                    temporarily
-                    store water for various purposes including flood control, water supply, and sediment management.
-                    This
-                    educational resource covers essential procedures, design principles, construction techniques, and
-                    safety
-                    considerations for retention dam systems.
+                    A Return Demonstration (RetDem) is a vital educational method in nursing where a student exhibits their understanding and mastery of a clinical skill by performing it in front of an instructor after being taught.
+                    This hands-on evaluation bridges the gap between classroom theory and real-world clinical challenges.
                 </p>
             </div>
             <div class="info-right">
                 <div>
-                    <h2>Key Topics Covered</h2>
-                    <ul class="info-topics">
-                        <li>Site selection and geological assessment</li>
-                        <li>Hydraulic design and calculations</li>
-                        <li>Construction materials and methods</li>
-                        <li>Safety and environmental considerations</li>
-                        <li>Maintenance and monitoring procedures</li>
+                    <h2>Key Benefits</h2>
+                    <ul class="info-topics" style="line-height: 1.8;">
+                        <li><i class="fa-solid fa-check text-primary"></i> Instills confidence in executing procedures safely</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Develops critical thinking and problem-solving skills</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Encourages real-time feedback and correction</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Prepares students to deliver high-quality patient care</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section fade-up">
+        <div class="cta-content-wrapper">
+            <h2>Ready to Elevate Your Nursing Skills?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">Start exploring the modules or dive right into our interactive video library.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="window.location.href='blog.html'">Explore Articles</button>
+                <button class="btn btn-secondary" onclick="window.location.href='vlog.html'" style="border-color: #fff; color: #fff;">Watch Videos</button>
             </div>
         </div>
     </section>
@@ -93,6 +159,21 @@
 
     <script src="../js/includes.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        // Set up the custom fade-up animations Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

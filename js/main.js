@@ -8,6 +8,7 @@ function initNavigation() {
     function setMenuOpen(isOpen) {
         if (!navMenu || !hamburger) return;
         navMenu.classList.toggle('active', isOpen);
+        hamburger.classList.toggle('active', isOpen);
         hamburger.setAttribute('aria-expanded', String(isOpen));
     }
 
@@ -17,34 +18,41 @@ function initNavigation() {
     }
 
     if (hamburger && navMenu) {
-        if (!hamburger.hasAttribute('aria-expanded')) {
-            hamburger.setAttribute('aria-expanded', 'false');
-        }
+        if (!hamburger.hasAttribute('data-nav-initialized')) {
+            hamburger.setAttribute('data-nav-initialized', 'true');
+            if (!hamburger.hasAttribute('aria-expanded')) {
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
 
-        hamburger.addEventListener('click', () => {
-            toggleMenu();
-        });
-
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
                 toggleMenu();
-            }
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                setMenuOpen(false);
             });
-        });
 
-        // ========== Mobile Menu Close on Outside Click ==========
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-                setMenuOpen(false);
-            }
-        });
+            hamburger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMenu();
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    setMenuOpen(false);
+                });
+            });
+
+            // ========== Mobile Menu Close on Outside Click ==========
+            document.addEventListener('click', (e) => {
+                if (navMenu.classList.contains('active')) {
+                    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                        setMenuOpen(false);
+                    }
+                }
+            });
+        }
     }
 }
 
@@ -84,80 +92,118 @@ if (document.readyState === 'loading') {
 
 // ========== Dark Mode Toggle ==========
 function setDarkMode(enabled) {
-    if (enabled) {
-        document.documentElement.classList.add('dark-mode');
-    } else {
-        document.documentElement.classList.remove('dark-mode');
-    }
-    localStorage.setItem('darkMode', enabled);
+    document.documentElement.classList.toggle('dark-mode', enabled);
+    localStorage.setItem('darkMode', String(enabled));
 }
 
 function getDarkModePref() {
-    if (localStorage.getItem('darkMode') !== null) {
-        return localStorage.getItem('darkMode') === 'true';
+    const storedPref = localStorage.getItem('darkMode');
+    if (storedPref !== null) {
+        return storedPref === 'true';
     }
-    // Default: match system preference
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
 function initDarkModeToggle() {
     const toggleBtn = document.getElementById('darkModeToggle');
     if (!toggleBtn) return;
-    const img = toggleBtn.querySelector('img');
-    if (!img) return;
-    // Set initial state
-    setDarkMode(getDarkModePref());
-    toggleBtn.setAttribute('aria-pressed', getDarkModePref());
-    img.src = getDarkModePref() ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
-    img.alt = getDarkModePref() ? 'Sun icon' : 'Moon icon';
-    toggleBtn.addEventListener('click', () => {
-        const enabled = !document.documentElement.classList.contains('dark-mode');
-        setDarkMode(enabled);
-        toggleBtn.setAttribute('aria-pressed', enabled);
-        img.src = enabled ? '../assets/icons/sun.png' : '../assets/icons/moon.png';
-        img.alt = enabled ? 'Sun icon' : 'Moon icon';
-    });
-}
 
-document.addEventListener('includes:loaded', () => {
-    initDarkModeToggle();
-});
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initDarkModeToggle);
-} else {
-    initDarkModeToggle();
+    const icon = toggleBtn.querySelector('i');
+    if (!icon) return;
+
+    function updateIcon(isDarkMode) {
+        icon.classList.toggle('fa-sun', isDarkMode);
+        icon.classList.toggle('fa-moon', !isDarkMode);
+        toggleBtn.setAttribute('aria-pressed', String(isDarkMode));
+    }
+
+    const isDarkMode = getDarkModePref();
+    setDarkMode(isDarkMode);
+    updateIcon(isDarkMode);
+
+    toggleBtn.addEventListener('click', () => {
+        const newDarkMode = !document.documentElement.classList.contains('dark-mode');
+        setDarkMode(newDarkMode);
+        updateIcon(newDarkMode);
+    });
 }
 
 // ========== Scroll Animations ==========
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-        }
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature-card, .activity-card, .article-content p, .highlight-box').forEach(el => {
+        observer.observe(el);
     });
-}, observerOptions);
-
-// Observe animated elements
-document.querySelectorAll('.feature-card, .activity-card').forEach(el => {
-    observer.observe(el);
-});
+}
 
 // ========== Smooth Scroll ==========
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
+}
+
+// ========== Main Initialization ==========
+function initializePage() {
+    initNavigation();
+    setActiveNavLink();
+    initDarkModeToggle();
+    initScrollAnimations();
+    initSmoothScroll();
+}
+
+// If pages use injected partials, wait for them.
+document.addEventListener('includes:loaded', () => {
+    initializePage();
 });
 
-// (Navigation outside-click handler moved into initNavigation so it
-// binds after injected header elements exist.)
+// Fallback for pages without include loader.
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePage);
+} else {
+    // If the document is already interactive or complete, and there's no 'includes:loaded' event fired,
+    // we might need to call initializePage directly.
+    // However, to avoid race conditions with partial loading, we rely on the includes.js to fire the event.
+}
+
+function copyLink(event) {
+    event.preventDefault();
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Link copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const url = encodeURIComponent(window.location.href);
+
+    const fbShare = document.querySelector('a[title="Share on Facebook"]');
+    if (fbShare) {
+        fbShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    }
+
+    const messengerShare = document.querySelector('a[title="Share on Messenger"]');
+    if (messengerShare) {
+        messengerShare.href = `fb-messenger://share/?link=${url}`;
+    }
+});

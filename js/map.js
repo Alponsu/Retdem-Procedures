@@ -2,58 +2,80 @@
 const locations = [
     {
         id: 1,
-        name: 'Retention Basin A',
-        location: 'Downtown District',
-        lat: 14.5995,
-        lng: 120.9842,
-        activity: 'Site Assessment',
-        description: 'Initial assessment and basic hydrology notes for the basin site.',
-        visits: 3,
-        beneficiaries: 0
+        name: 'Easy Med Pharmacy And General Merchandise',
+        location: 'San Rafael, Bulacan',
+        lat: 15.002401969587348,
+        lng: 120.93170537256697,
+        // activity: 'Site Assessment',
+        description: 'Located in San Rafael, Bulacan, this establishment serves as both a pharmacy and a general retailer, making it a practical resource for nursing students in the area. It is a convenient source for basic medical materials such as gauze, bandages, surgical tapes, and antiseptic solutions needed for wound care or sterile technique demonstrations. Beyond strictly medical items, the general merchandise aspect of the shop may provide other miscellaneous items sometimes required for community health bags or bedside care setups.',
+        // visits: 3,
+        // beneficiaries: 0
     },
     {
         id: 2,
-        name: 'Detention Pond North',
-        location: 'North Valley',
-        lat: 14.6760,
-        lng: 121.0437,
-        activity: 'Design Review',
-        description: 'Review of inlet/outlet design and stormwater routing assumptions.',
-        visits: 2,
-        beneficiaries: 0
+        name: 'Greenwell Pharmacy and Medical Supplies',
+        location: 'Diliman I Road, San Rafael, Bulacan',
+        lat: 15.024399851311257,
+        lng: 120.95043935384234,
+        // activity: 'Design Review',
+        description: 'The Greenwell Pharmacy and Medical Supplies, is located on Diliman I Road in San Rafael, Bulacan. This is an excellent resource specifically because it focuses on both pharmaceutical and medical equipment. You can likely find fundamental nursing tools such as stethoscopes, sphygmomanometers (blood pressure cuffs), and digital thermometers. It typically stocks specialized items like sterile gloves, surgical scissors, forceps, and various dressings that are essential for demonstrating wound dressing or suture care. The shop is a reliable source for high-quality disinfectants, alcohol, and PPE that meet the standards required for clinical grading.',
+        // visits: 2,
+        // beneficiaries: 0
     },
     {
         id: 3,
-        name: 'Spillway Demo Site',
-        location: 'Central Area',
-        lat: 14.5547,
-        lng: 121.0244,
-        activity: 'Construction Demo',
-        description: 'Construction method walkthrough for spillway and embankment components.',
-        visits: 4,
-        beneficiaries: 0
+        name: 'MTMC Medical Supplies',
+        location: 'Baliwag, Bulacan',
+        lat: 14.969969826880824,
+        lng: 120.8961664654779,
+        // activity: 'Construction Demo',
+        description: 'Located along Benigno S. Aquino Avenue in Baliwag, Bulacan. This local pharmacy and Medical Supplies store is a practical stop for students needing medical supplies in a central, accessible location in the areas of Baliwag and San Rafael. You can find essential "dry" supplies like sterile gauze, adhesive bandages, and medical tape, which are frequently required for wound care and dressing change demonstrations.',
+        // visits: 4,
+        // beneficiaries: 0
     },
     {
         id: 4,
-        name: 'Sediment Control Basin',
-        location: 'East Side',
-        lat: 14.6507,
-        lng: 121.1029,
-        activity: 'Maintenance Check',
-        description: 'Inspection checklist for sediment build-up and maintenance schedule planning.',
-        visits: 1,
-        beneficiaries: 0
+        name: 'Bulacan State University - San Rafael Campus (BSU SRC)',
+        location: 'San Rafael, Bulacan',
+        lat: 15.013673162779748,
+        lng: 120.94495279800283,
+        // activity: 'Construction Demo',
+        description: 'University in San Rafael, Bulacan is an academic institution that provides an integrated higher education with the growing healthcare in the region. For those in the medical and nursing fields,  the university’s campus provides a modern academic environment where nursing theories, anatomy and physiology, and clinical foundations are taught. The facilities are designed to provide classroom learning and practical application, often featuring simulation laboratories where students can master return demonstrations for skills before entering their clinical rotations. As a state-funded university, it emphasizes community-based health programs and evidence-based practice, preparing students to meet the rigorous standards of professional licensure and hospital duty.'
+        // visits: 4,
+        // beneficiaries: 0
     },
     {
         id: 5,
-        name: 'Community Flood Buffer',
-        location: 'West End',
-        lat: 14.5639,
-        lng: 120.9943,
-        activity: 'Safety Briefing',
-        description: 'Safety and environmental considerations briefing for nearby residents.',
-        visits: 2,
-        beneficiaries: 0
+        name: 'R. De C. Galvez Medical Center, Inc.',
+        location: 'Cagayan Valley Road of San Ildefonso Bulacan',
+        lat: 15.080568631821702,
+        lng: 120.94019052498493,
+        // activity: 'Construction Demo',
+        description: 'This private hospital can be found at Cagayan Valley Road of San Ildefonso Bulacan, it provides a full-service hospital and a vital training ground for clinical practices. As a secondary care facility, it provides an environment for vital learning of practicing student nurses for inpatient management, emergency interventions, and surgical procedure. It is an ideal setting for mastering professional nursing competencies.'
+        // visits: 4,
+        // beneficiaries: 0
+    },
+    {
+        id: 6,
+        name: 'Bulacan Medical Center',
+        location: '99 Potenciano Street in Malolos, Bulacan',
+        lat: 14.858861667452457,
+        lng: 120.81658968079955,
+        // activity: 'Construction Demo',
+        description: 'This Bulacan Medical Center (BMC) is a government-owned tertiary hospital located at 99 Potenciano Street in Malolos, Bulacan serves as the main foundational training center for healthcare professionals in the region. As a Level 3 DOH accredited facility, it promotes a clinical environment that one can gain hands-on experience such as Intensive Care Unit (ICU), Neonatal ICU (NICU), and modern Outpatient Department (OPD).'
+        // visits: 4,
+        // beneficiaries: 0
+    },
+    {
+        id: 7,
+        name: 'Twin Care Hospital Incorporated',
+        location: 'Tapatan Road in Marungko, Angat, Bulacan',
+        lat: 14.945280110597121,
+        lng: 121.0097486961465,
+        // activity: 'Construction Demo',
+        description: 'Located along the road side of Tapatan Road in Marungko, Angat, Bulacan is a private healthcare institution that provides a secondary level clinical care. It provides an excellent setting for developing core nursing competencies in General Medicine, Maternal and Child Health, and Emergency Services. The facility’s layout and community focus allow for a high level of direct patient interaction, making it an ideal location to practice therapeutic communication and systematic nursing documentation within a professional healthcare team.'
+        // visits: 4,
+        // beneficiaries: 0
     }
 ];
 
@@ -100,6 +122,13 @@ function renderLocations() {
         locations.forEach(loc => {
             locationsList.appendChild(createLocationItem(loc));
         });
+
+        // Add scroll class if more than 3 locations
+        if (locations.length > 3) {
+            locationsList.classList.add('scrollable');
+        } else {
+            locationsList.classList.remove('scrollable');
+        }
     }
 
     if (locationsGrid) {
@@ -153,6 +182,27 @@ function wireSearch() {
     });
 }
 
+function updateLocationDescription(location) {
+    const descriptionContainer = document.getElementById('locationDescription');
+    if (!descriptionContainer) return;
+
+    if (location) {
+        descriptionContainer.classList.remove('empty-slate');
+        descriptionContainer.innerHTML = `
+            <h3>${escapeHtml(location.name)}</h3>
+            <p>${escapeHtml(location.description)}</p>
+        `;
+    } else {
+        descriptionContainer.classList.add('empty-slate');
+        descriptionContainer.innerHTML = `
+            <h3>Location Details</h3>
+            <p>Select a location from the list to see more details here.</p>
+        `;
+    }
+}
+
+
+
 // ========== Initialize Map (Leaflet) ==========
 let map;
 const markersById = new Map();
@@ -184,6 +234,7 @@ function initMap() {
         marker.on('click', () => {
             setActiveLocation(loc.id);
             updateMapInfo(loc);
+            updateLocationDescription(loc);
         });
 
         markersById.set(String(loc.id), marker);
@@ -201,6 +252,7 @@ function selectLocationById(locationId, { openPopup = true } = {}) {
 
     setActiveLocation(loc.id);
     updateMapInfo(loc);
+    updateLocationDescription(loc);
 
     const marker = markersById.get(String(loc.id));
     if (map && marker) {

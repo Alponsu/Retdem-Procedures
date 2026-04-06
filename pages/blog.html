@@ -1,320 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog & Articles - Nursing RetDem</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
-        (function() {
+        (function () {
             const darkMode = localStorage.getItem('darkMode');
             if (darkMode === 'true') {
                 document.documentElement.classList.add('dark-mode');
             }
         })();
     </script>
+    <link rel="icon" type="image/png" href="../assets/icons/nurse.png">
 </head>
+
 <body>
     <!-- Navigation -->
-    <div data-include="../partials/header.html"></div>
+    <div class="navbar" data-include="../partials/header.html"></div>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <!-- <section class="page-header">
         <div class="header-content">
             <h1 class="header-title">Blog & Articles</h1>
             <p class="header-subtitle">Stories and insights from our community health initiatives</p>
         </div>
-    </section>
+    </section> -->
 
     <!-- Blog Section -->
     <section class="blog-section">
         <div class="blog-container">
-            <!-- Filters -->
-            <div class="blog-filters">
-                <button class="filter-btn active" data-filter="all">All Articles</button>
-                <button class="filter-btn" data-filter="1st-sem">1st Sem RetDems</button>
-                <button class="filter-btn" data-filter="2nd-sem">2nd Sem RetDems</button>
-            </div>
 
-            <!-- Blog Grid -->
-            <div class="blog-grid" id="blogGrid">
-                
-                <!-- 1st Sem RetDems -->
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Fundic Height Measurement and Leopold's Maneuver</h3>
-                        <p>[Brief description placeholder for Fundic Height Measurement and Leopold's Maneuver]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <div class="blog-sidebar-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Categories
+                </div>
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">All Articles</button>
+                    <button class="filter-btn" data-filter="1st-sem">1st Sem RetDems</button>
+                    <button class="filter-btn" data-filter="2nd-sem">2nd Sem RetDems</button>
+                </div>
+            </aside>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Female Catheterization</h3>
-                        <p>[Brief description placeholder for Female Catheterization]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Main Content Area -->
+            <div class="blog-main-content">
+                <h1 class="blog-main-title">All Articles</h1>
+                <div class="blog-divider"></div>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Capillary Blood Glucose (CBG) Testing</h3>
-                        <p>[Brief description placeholder for CBG Testing]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                <!-- Top Row (Spotlight & Trending) -->
+                <div class="blog-top-row">
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
+                    <!-- Spotlight -->
+                    <div class="blog-spotlight">
+                        <div class="section-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                                </path>
+                            </svg>
+                            Spotlight
                         </div>
-                        <h3>Essential Intrapartal Newborn Care (EINC)</h3>
-                        <p>[Brief description placeholder for EINC with Ophthalmic Ointment, IM Medication Administration & Breastfeeding Initiation]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Bag Technique & Wound Care</h3>
-                        <p>[Brief description placeholder for Bag Technique & Wound Care]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
+                        <article class="spotlight-card" data-category="spotlight"><a href="main-blog.html">
+                                <div class="blog-image"
+                                    style="background-image: url('../assets/1st/main.png'); background-size: cover; background-position: center;">
+                                    <span class="spotlight-badge">MAIN BLOG</span>
+                                </div>
+                                <h3>Return Demonstration: Requirement or Real Preparation?</h3>
+                                <div class="author-info-spotlight">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/quinto.jpg'); background-size: cover;"></div>
+                                    <span>Cheska Dawn O. Quinto</span>
+                                </div>
+                            </a>
+                        </article>
                     </div>
-                </article>
+                </div>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Vial Preparation & Administration of Intradermal Injection</h3>
-                        <p>[Brief description placeholder for Intradermal Injection]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                <div id="topRowSpacer"><br><br></div>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Administering Medications: Oral, Otic, Ophthalmic, & Intranasal</h3>
-                        <p>[Brief description placeholder for Oral, Otic, Ophthalmic & Intranasal Medications]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
+                <!-- Category Grid -->
+                <div class="blog-grid category-grid" id="1stSemGrid">
+                    <!-- 1st Sem Header -->
+                    <div class="category-header" data-header-category="1st-sem">
+                        <h3>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            1st Sem RetDems
+                        </h3>
+                        <button class="read-more-btn" data-target="1st-sem">Read More &rarr;</button>
                     </div>
-                </article>
 
-                <article class="blog-card" data-category="1st-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">1st Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Ampule Preparation & Administration of Subcutaneous and Intramuscular Injections</h3>
-                        <p>[Brief description placeholder for SC and IM Injections]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <!-- 1st Sem RetDems -->
+                    <article class="blog-card" data-category="1st-sem"><a href="fundic-height.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-fundic.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Fundic Height Measurement and Leopold's Maneuver</h3>
+                                <p>Fundic height measurement and Leopold�s maneuver are important obstetric assessment procedures used to evaluate fetal growth, fetal position, presentation, and fetal well-being during pregnancy. These techniques help nurses monitor pregnancy progress and detect possible abnormalities.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/quinto.jpg'); background-size: cover;"></div>
+                                    <span>Cheska Dawn O. Quinto</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <!-- 2nd Sem RetDems -->
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Performing Infant's Bath</h3>
-                        <p>[Brief description placeholder for Infant's Bath]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="catheterization.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-female.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Female Catheterization</h3>
+                                <p>Female catheterization is a nursing procedure used to insert a catheter through the urethra into the bladder to drain urine, obtain a sterile urine specimen, monitor urinary output, or relieve urinary retention.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/cajanding.jpg'); background-size: cover;"></div>
+                                    <span>Karylle Mae Casandra B. Cajanding</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Infant Oro-Nasopharyngeal Suctioning</h3>
-                        <p>[Brief description placeholder for Infant Suctioning]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="cbg.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-capillary.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Capillary Blood Glucose (CBG) Testing</h3>
+                                <p>Capillary Blood Glucose (CBG) testing is a procedure used to measure the amount of glucose in capillary blood through a small skin puncture, usually from the fingertip in adults or heel in infants.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/paulino.jpg'); background-size: cover;"></div>
+                                    <span>Lujille Ezekiel A. Paulino</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Infant Cardio-Pulmonary Resuscitation</h3>
-                        <p>[Brief description placeholder for Infant CPR]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="einc.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-newborn.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Essential Intrapartal Newborn Care (EINC) with Ophthalmic Ointment, IM Medication
+                                    Administration & Breastfeeding Initiation</h3>
+                                <p>Essential Intrapartal Newborn Care (EINC) is a set of interventions performed immediately after birth to ensure the newborn�s well-being. It includes immediate drying, skin-to-skin contact, umbilical cord care, administration of prophylactic medications (vitamin K, erythromycin, vaccines), and early initiation of breastfeeding.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/duran.jpg'); background-size: cover;"></div>
+                                    <span>Anton Jusszel Van DC. Duran</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Starting an Intravenous Infusion</h3>
-                        <p>[Brief description placeholder for Starting IV Infusion]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="bag-technique.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-bag.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Bag Technique & Wound Care</h3>
+                                <p>Bag technique is a community health nursing procedure that involves the proper use of the Public Health Nurse (PHN) bag to prevent contamination while providing nursing care in the client�s home. Wound care is the systematic cleaning, assessment, and dressing of a wound using aseptic technique to promote healing and prevent infection.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/nebres.jpg'); background-size: cover;"></div>
+                                    <span>Jans Gabrielle M. Angeles</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Monitoring and Maintaining an Infusion</h3>
-                        <p>[Brief description placeholder for Monitoring IV Infusion]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="vial.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-vial.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Vial Preparation & Administration of Intradermal Injection</h3>
+                                <p>Intradermal injection is a technique of administering medication into the dermis, the layer just below the epidermis of the skin. Vial preparation ensures that the correct dosage is withdrawn safely from a vial while maintaining aseptic technique.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/angeles.jpeg'); background-size: cover;"></div>
+                                    <span>Jans Gabrielle M. Angeles</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Changing Fluid Container and Tubing</h3>
-                        <p>[Brief description placeholder for Changing IV Container/Tubing]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="meds.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-oral.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Administering Medications: Oral, Otic, Ophthalmic, & Intranasal</h3>
+                                <p>Administering medications through oral, otic, ophthalmic, and intranasal routes is a nursing procedure that ensures safe and accurate delivery of prescribed drugs through different body systems.
+                                </p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/bognot.jpg'); background-size: cover;"></div>
+                                    <span>Keith Nicole Bognot</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Discontinuing an Intravenous Infusion</h3>
-                        <p>[Brief description placeholder for Discontinuing IV Infusion]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                    <article class="blog-card" data-category="1st-sem"><a href="ampule.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/1st/1-ampule.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">1st Sem RetDem</span>
+                                </div>
+                                <h3>Ampule Preparation & Administration of Subcutaneous and Intramuscular Injections
+                                </h3>
+                                <p>Ampule preparation and administration of subcutaneous and intramuscular injections is a nursing procedure that involves safely withdrawing medication from an ampule and delivering it through the appropriate injection route.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/quinto.jpg'); background-size: cover;"></div>
+                                    <span>Cheska Dawn O. Quinto</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Administering Medications Via IV</h3>
-                        <p>[Brief description placeholder for IV Push, Drug Incorporation, Volumetric Chamber]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
-                    </div>
-                </article>
+                </div>
 
-                <article class="blog-card" data-category="2nd-sem">
-                    <div class="blog-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">2nd Sem RetDem</span>
-                            <span class="blog-date">[Date]</span>
-                        </div>
-                        <h3>Managing Blood Transfusion</h3>
-                        <p>[Brief description placeholder for Blood Transfusion]</p>
-                        <div class="blog-footer">
-                            <span class="read-time">[X] min read</span>
-                            <a href="#" class="read-more">Read Article →</a>
-                        </div>
+                <div id="middleSpacer"><br><br></div>
+
+                <div class="blog-grid category-grid" id="2ndSemGrid">
+                    <!-- 2nd Sem Header -->
+                    <div class="category-header" data-header-category="2nd-sem">
+                        <h3>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            2nd Sem RetDems
+                        </h3>
+                        <button class="read-more-btn" data-target="2nd-sem">Read More &rarr;</button>
                     </div>
-                </article>
-            </div>
-        </div>
+
+                    <!-- 2nd Sem RetDems -->
+                    <article class="blog-card" data-category="2nd-sem"><a href="bath.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/PERFORMING\ INFANTS\ BATH.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Performing Infant's Bath</h3>
+                                <p>Performing an infant�s bath is a nursing procedure aimed at promoting hygiene, skin integrity, and comfort for newborns and infants. This procedure involves carefully cleansing the infant�s body while maintaining safety, warmth, and proper handling.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/cajanding.jpg'); background-size: cover;"></div>
+                                    <span>Karylle Mae Casandra B. Cajanding</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="sunctioning.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/INFANT\ ORO-NASOPHARYNGEAL\ SUCTIONING.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Infant Oro-Nasopharyngeal Suctioning</h3>
+                                <p>Infant oro-nasopharyngeal suctioning is a nursing procedure performed to remove excess mucus, fluids, or secretions from an infant�s mouth, pharynx, and nose using a suction catheter connected to a suction apparatus.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/paulino.jpg'); background-size: cover;"></div>
+                                    <span>Lujille Ezekiel A. Paulino</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="cardio.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/INFANT\ CARDIO\ PULMONARY\ RESUSCITATION.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Infant Cardio-Pulmonary Resuscitation</h3>
+                                <p>Cardiopulmonary resuscitation (CPR) is the basic life-saving skill used in the event of cardiac, respiratory, or cardiopulmonary arrest to maintain tissue oxygenation by providing external cardiac compression and/or artificial respiration.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/duran.jpg'); background-size: cover;"></div>
+                                    <span>Anton Jusszel Van DC. Duran</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="intravenous.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/STARTING\ AN\ INTRAVENOUS\ INFUSION.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Starting an Intravenous Infusion</h3>
+                                <p>Starting an intravenous (IV) infusion is a clinical procedure in which a sterile catheter or needle is inserted into a vein to establish direct access to the bloodstream. This allows healthcare providers to administer fluids, medications, blood products, or nutrients efficiently and accurately.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/nebres.jpg'); background-size: cover;"></div>
+                                    <span>Jans Gabrielle M. Angeles</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="monitoring.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/MONITORING\ AND\ MAINTAINING\ AN\ INFUSION.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Monitoring and Maintaining an Infusion</h3>
+                                <p>Monitoring and maintaining an intravenous (IV) infusion is the continuous assessment and management of an established IV line to ensure that fluids or medications are delivered safely, accurately, and at the prescribed rate.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/angeles.jpeg'); background-size: cover;"></div>
+                                    <span>Jans Gabrielle M. Angeles</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem">b<a href="fluid-container.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/CHANGING\ FLUID\ CONTAINER\ AND\ TUBING.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Changing Fluid Container and Tubing</h3>
+                                <p>Changing the fluid container and tubing is a nursing procedure performed when the intravenous (IV) fluid in the container is nearly empty. The old container is replaced with a new sterile IV fluid container, and the tubing may also be changed according to hospital protocol.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/bognot.jpg'); background-size: cover;"></div>
+                                    <span>Keith Nicole Bognot</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="discontinuing.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/DISCONTINUING\ AN\ INTRAVENOUS\ INFUSION.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Discontinuing an Intravenous Infusion</h3>
+                                <p>Discontinuing an intravenous (IV) infusion is the procedure of safely removing the IV catheter and stopping the infusion of fluids or medications when the therapy is no longer required.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/quinto.jpg'); background-size: cover;"></div>
+                                    <span>Cheska Dawn O. Quinto</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="administering-meds.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/ADMINISTERING\ MEDICATIONS\ VIA.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Administering Medications Via IV</h3>
+                                <p>Administering medications via intravenous (IV) route involves delivering drugs directly into the bloodstream using different methods such as IV push, drug incorporation into IV fluids, or through a volumetric chamber (Soluset).
+                                </p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/cajanding.jpg'); background-size: cover;"></div>
+                                    <span>Karylle Mae Casandra B. Cajanding</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="2nd-sem"><a href="blood.html">
+                            <div class="blog-image"
+                                style="background-image: url('../assets/2nd/MANAGING\ BLOOD\ TRANSFUSION.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">2nd Sem RetDem</span>
+                                </div>
+                                <h3>Managing Blood Transfusion</h3>
+                                <p>Managing blood transfusion is the process of administering blood or blood products to a patient
+                    through the intravenous route to replace lost blood components and improve the patient�s circulating
+                    blood volume.</p>
+                                <div class="author-info">
+                                    <div class="author-avatar"
+                                        style="background-image: url('../assets/images/paulino.jpg'); background-size: cover;"></div>
+                                    <span>Lujille Ezekiel A. Paulino</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div> <!-- End of Category Grid -->
+
+                </div> <!-- End of Main Content Area -->
+            </div> <!-- End of Container -->
+        </div> <!-- End of Section -->
     </section>
 
     <!-- Footer -->
@@ -323,5 +469,7 @@
     <script src="../js/includes.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blog.js"></script>
+    <script src="../js/tooltip.js"></script>
 </body>
+
 </html>

@@ -176,7 +176,6 @@
 
 /* ========== Location Description Sidebar ========== */
 .location-description-sidebar {
-    text-align: justify;
     background: var(--secondary-light);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
@@ -230,6 +229,7 @@
 }
 
 .description-content p {
+    text-align: justify;
     font-size: 1.05rem;
     color: var(--text-secondary);
     line-height: 1.8;

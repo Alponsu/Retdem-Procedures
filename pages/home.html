@@ -10,122 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Home Page Specific Animations & Features */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .delay-1 { transition-delay: 0.1s; }
-        .delay-2 { transition-delay: 0.2s; }
-        .delay-3 { transition-delay: 0.3s; }
 
-        /* Stats Section */
-        .stats-section {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-bold));
-            color: #ffffff;
-            text-align: center;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .stat-item h3 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Modules Preview Section */
-        .modules-section {
-            padding: 5rem 2rem;
-            background: var(--bg-secondary);
-        }
-        .modules-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-top: 3rem;
-        }
-        .module-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow-sm);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-        .module-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary-color);
-        }
-        .module-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            background: rgba(var(--primary-rgb), 0.1);
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            text-align: center;
-            padding: 6rem 2rem;
-            background: url('../assets/header.jpg') center/cover fixed;
-            position: relative;
-            color: #fff;
-        }
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10, 25, 47, 0.85);
-        }
-        .cta-content-wrapper {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .cta-content-wrapper h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-topics li{
-            padding-top: 1rem;
-             list-style-type: none;
-        }
-        
-    </style>
     <script>
         (function () {
             const darkMode = localStorage.getItem('darkMode');
@@ -263,7 +148,7 @@
             <h2>Ready to Elevate Your Nursing Skills?</h2>
             <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">Start exploring the modules or dive right into our interactive video library.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <button class="btn btn-primary" onclick="window.location.href='meds.html'">Explore Modules</button>
+                <button class="btn btn-primary" onclick="window.location.href='blog.html'">Explore Articles</button>
                 <button class="btn btn-secondary" onclick="window.location.href='vlog.html'" style="border-color: #fff; color: #fff;">Watch Videos</button>
             </div>
         </div>

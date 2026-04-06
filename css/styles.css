@@ -185,6 +185,10 @@
     color: var(--text-primary) !important;
 }
 
+.dark-mode .earth-btn:hover,
+.dark-mode .earth-btn:focus {
+    background: var(--accent-cyan);
+}
 
 /* ========== Reset & Base Styles ========== */
 * {

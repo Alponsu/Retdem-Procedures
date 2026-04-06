@@ -186,9 +186,9 @@ function copyLink(event) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const url = encodeURIComponent(window.location.href);
-    
+
     const fbShare = document.querySelector('a[title="Share on Facebook"]');
     if (fbShare) {
         fbShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;

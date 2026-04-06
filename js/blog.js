@@ -14,7 +14,7 @@ const blogDivider = document.querySelector('.blog-divider');
 function updateBlogDisplay(filter) {
     if (filter === 'all') {
         mainTitle.textContent = "All Articles";
-        
+
         if (grid1stSem) grid1stSem.style.display = 'grid';
         if (grid2ndSem) grid2ndSem.style.display = 'grid';
         if (blogTopRow) blogTopRow.style.display = 'flex';
@@ -33,7 +33,7 @@ function updateBlogDisplay(filter) {
 
         blogCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            
+
             if (category === '1st-sem') {
                 if (sem1Count < 4) {
                     showCard(card);
@@ -64,7 +64,7 @@ function updateBlogDisplay(filter) {
             if (grid1stSem) grid1stSem.style.display = 'none';
             if (grid2ndSem) grid2ndSem.style.display = 'grid';
         }
-        
+
         if (blogTopRow) blogTopRow.style.display = 'none';
         if (topRowSpacer) topRowSpacer.style.display = 'none';
         if (middleSpacer) middleSpacer.style.display = 'none';
@@ -77,7 +77,7 @@ function updateBlogDisplay(filter) {
 
         blogCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            
+
             if (category === filter) {
                 showCard(card);
             } else {

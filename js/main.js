@@ -176,3 +176,26 @@ if (document.readyState === 'loading') {
     // we might need to call initializePage directly.
     // However, to avoid race conditions with partial loading, we rely on the includes.js to fire the event.
 }
+
+function copyLink(event) {
+    event.preventDefault();
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Link copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const url = encodeURIComponent(window.location.href);
+    
+    const fbShare = document.querySelector('a[title="Share on Facebook"]');
+    if (fbShare) {
+        fbShare.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    }
+
+    const messengerShare = document.querySelector('a[title="Share on Messenger"]');
+    if (messengerShare) {
+        messengerShare.href = `fb-messenger://share/?link=${url}`;
+    }
+});

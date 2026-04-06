@@ -6,11 +6,11 @@ const mainTitle = document.querySelector('.blog-main-title');
 const readMoreBtns = document.querySelectorAll('.read-more-btn');
 const grid1stSem = document.getElementById('1stSemGrid');
 const grid2ndSem = document.getElementById('2ndSemGrid');
-const blogTopRow = document.querySelector('.blog-top-row');
+// const blogTopRow = document.querySelector('.blog-top-row');
 const topRowSpacer = document.getElementById('topRowSpacer');
 const middleSpacer = document.getElementById('middleSpacer');
 const blogDivider = document.querySelector('.blog-divider');
-const vlogSpotlight = document.querySelector('.vlog-top-row');
+const blogTopRow = document.querySelector('.vlog-top-row');
 
 function updateVlogDisplay(filter) {
     if (filter === 'all') {
@@ -18,7 +18,7 @@ function updateVlogDisplay(filter) {
         
         if (grid1stSem) grid1stSem.style.display = 'grid';
         if (grid2ndSem) grid2ndSem.style.display = 'grid';
-        if (vlogSpotlight) vlogSpotlight.style.display = 'block';
+        if (blogTopRow) blogTopRow.style.display = 'flex';
         if (topRowSpacer) topRowSpacer.style.display = 'block';
         if (middleSpacer) middleSpacer.style.display = 'block';
         if (blogDivider) blogDivider.style.display = 'block';
@@ -66,8 +66,8 @@ function updateVlogDisplay(filter) {
             if (grid2ndSem) grid2ndSem.style.display = 'grid';
         }
         
-        if (vlogSpotlight) vlogSpotlight.style.display = 'none';
-        if (topRowSpacer) topRowSpacer.style.display = 'none';
+        if (blogTopRow) blogTopRow.style.display = 'flex';
+        if (topRowSpacer) topRowSpacer.style.display = 'block';
         if (middleSpacer) middleSpacer.style.display = 'none';
         if (blogDivider) blogDivider.style.display = 'none';
 

@@ -1,10 +1,4 @@
 /* MAIN ARTICLE */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 p {
     text-align: justify;
 }
@@ -570,7 +564,6 @@ p {
     font-weight: 600;
 }
 
-
 /* ========== Dark Mode Styles ========== */
 .dark-mode .blog-header {
     /* backdrop-filter: blur(10px) saturate(180%);
@@ -845,3 +838,28 @@ p {
     }
 }
 /* END OF MAIN ARTICLE */
+
+/* FUNDIC HEIGHT */
+.image-placeholder-container img {
+    max-width: 50%;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+.toc-item-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.toc-toggle {
+    cursor: pointer;
+    /* padding-right: 10px; */
+    user-select: none;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.toc-toggle.open {
+    transform: rotate(90deg);
+}
+/* END OF FUNDIC HEIGHT */

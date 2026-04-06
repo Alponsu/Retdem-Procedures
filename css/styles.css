@@ -93,6 +93,10 @@
     color: var(--text-primary) !important;
 }
 
+.leaflet-popup-content strong {
+    color: var(--primary-black) !important;
+}
+
 .dark-mode .header-subtitle,
 .dark-mode .hero-subtitle,
 .dark-mode .feature-card:hover h3,

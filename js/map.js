@@ -182,6 +182,27 @@ function wireSearch() {
     });
 }
 
+function updateLocationDescription(location) {
+    const descriptionContainer = document.getElementById('locationDescription');
+    if (!descriptionContainer) return;
+
+    if (location) {
+        descriptionContainer.classList.remove('empty-slate');
+        descriptionContainer.innerHTML = `
+            <h3>${escapeHtml(location.name)}</h3>
+            <p>${escapeHtml(location.description)}</p>
+        `;
+    } else {
+        descriptionContainer.classList.add('empty-slate');
+        descriptionContainer.innerHTML = `
+            <h3>Location Details</h3>
+            <p>Select a location from the list to see more details here.</p>
+        `;
+    }
+}
+
+
+
 // ========== Initialize Map (Leaflet) ==========
 let map;
 const markersById = new Map();
@@ -213,6 +234,7 @@ function initMap() {
         marker.on('click', () => {
             setActiveLocation(loc.id);
             updateMapInfo(loc);
+            updateLocationDescription(loc);
         });
 
         markersById.set(String(loc.id), marker);
@@ -230,6 +252,7 @@ function selectLocationById(locationId, { openPopup = true } = {}) {
 
     setActiveLocation(loc.id);
     updateMapInfo(loc);
+    updateLocationDescription(loc);
 
     const marker = markersById.get(String(loc.id));
     if (map && marker) {

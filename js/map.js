@@ -251,7 +251,7 @@ function initMap() {
     locations.forEach(loc => {
         const marker = L.marker([loc.lat, loc.lng]).addTo(map);
         marker.bindPopup(
-            `<strong>${escapeHtml(loc.name)}</strong><br>${escapeHtml(loc.location)}<br><em>${escapeHtml(loc.activity)}</em>`
+            `<strong>${escapeHtml(loc.name)}</strong><br>${escapeHtml(loc.location)}<br>`
         );
 
         marker.on('click', () => {

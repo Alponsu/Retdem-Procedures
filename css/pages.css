@@ -83,9 +83,9 @@
 .locations-list.scrollable {
     max-height: 500px;
     overflow-y: auto;
-    padding-right: var(--spacing-sm);
+    /* padding-right: var(--spacing-sm); */
     /* For Firefox */
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--primary-teal) transparent;
 }
 
@@ -201,11 +201,11 @@
 
 .description-content {
     overflow-y: auto;
-    padding-right: var(--spacing-sm);
+    /* padding-right: var(--spacing-sm); */
     flex: 1 1 auto;
     /* Allow to take available space and shrink if necessary */
     /* Firefox */
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--primary-teal) transparent;
 }
 

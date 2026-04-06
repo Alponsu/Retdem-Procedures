@@ -8,6 +8,7 @@ function initNavigation() {
     function setMenuOpen(isOpen) {
         if (!navMenu || !hamburger) return;
         navMenu.classList.toggle('active', isOpen);
+        hamburger.classList.toggle('active', isOpen);
         hamburger.setAttribute('aria-expanded', String(isOpen));
     }
 
@@ -17,34 +18,41 @@ function initNavigation() {
     }
 
     if (hamburger && navMenu) {
-        if (!hamburger.hasAttribute('aria-expanded')) {
-            hamburger.setAttribute('aria-expanded', 'false');
-        }
+        if (!hamburger.hasAttribute('data-nav-initialized')) {
+            hamburger.setAttribute('data-nav-initialized', 'true');
+            if (!hamburger.hasAttribute('aria-expanded')) {
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
 
-        hamburger.addEventListener('click', () => {
-            toggleMenu();
-        });
-
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
                 toggleMenu();
-            }
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                setMenuOpen(false);
             });
-        });
 
-        // ========== Mobile Menu Close on Outside Click ==========
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-                setMenuOpen(false);
-            }
-        });
+            hamburger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMenu();
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    setMenuOpen(false);
+                });
+            });
+
+            // ========== Mobile Menu Close on Outside Click ==========
+            document.addEventListener('click', (e) => {
+                if (navMenu.classList.contains('active')) {
+                    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                        setMenuOpen(false);
+                    }
+                }
+            });
+        }
     }
 }
 

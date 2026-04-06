@@ -607,7 +607,8 @@ a {
 
 /* ========== Info Section ========== */
 .info-section {
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: var(--spacing-2xl) var(--spacing-lg);    
+    background: var(--secondary-gray);
 }
 
 .info-container {
@@ -1024,13 +1025,15 @@ a {
 /* Reduce bottom spacing for modules section when it's visible on tablet and mobile */
 @media (max-width: 768px) {
     .modules-section.fade-up.visible {
-        padding-bottom: 2rem; /* smaller than desktop */
+        padding-bottom: 2rem;
+        /* smaller than desktop */
     }
 }
 
 @media (max-width: 480px) {
     .modules-section.fade-up.visible {
-        padding-bottom: 1.25rem; /* tighter on small phones */
+        padding-bottom: 1.25rem;
+        /* tighter on small phones */
     }
 }
 
@@ -1100,7 +1103,8 @@ a {
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: var(--spacing-sm); /* space between text and buttons */
+    padding-top: var(--spacing-sm);
+    /* space between text and buttons */
 }
 
 /* Make the primary (Explore Maps) button a bit larger and more touch-friendly */
@@ -1115,6 +1119,7 @@ a {
         width: 100%;
         max-width: 320px;
     }
+
     .hero-buttons {
         padding-top: var(--spacing-md);
     }
@@ -1131,7 +1136,8 @@ a {
         margin: 0 auto;
         padding: 0 var(--spacing-md);
         box-sizing: border-box;
-        padding-top: var(--spacing-sm); /* smaller top gap on tablet */
+        padding-top: var(--spacing-sm);
+        /* smaller top gap on tablet */
     }
 
     .info-left,
@@ -1167,6 +1173,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -1178,6 +1185,7 @@ a {
 }
 
 @media (max-width: 480px) {
+
     /* Tighter spacing and scaled typography for small phones */
     :root {
         --spacing-xs: 0.25rem;
@@ -1344,6 +1352,7 @@ a {
 
 /* ========== CTA RESPONSIVE ADJUSTMENTS ========== */
 @media (max-width: 768px) {
+
     .cta-section,
     .cta-section.fade-up.visible {
         padding: 3rem 1.25rem;
@@ -1376,12 +1385,13 @@ a {
         border-radius: 0.75rem;
     }
 
-    .cta-section .btn + .btn {
+    .cta-section .btn+.btn {
         margin-left: 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
+
     .cta-section,
     .cta-section.fade-up.visible {
         padding: 2rem 2rem;
@@ -1409,15 +1419,16 @@ a {
         width: 100%;
         max-width: none;
         box-sizing: border-box;
-        margin: 0.35rem 0 0.35rem 0; /* vertical spacing only */
+        margin: 0.35rem 0 0.35rem 0;
+        /* vertical spacing only */
         padding: 0.6rem 1rem;
         font-size: 0.95rem;
     }
 
     /* ensure stacked buttons align and have consistent spacing */
-    .cta-section .btn + .btn {
+    .cta-section .btn+.btn {
         margin-left: 0;
-        margin-top: -0.5rem; /* increased gap between stacked CTA buttons */
+        margin-top: -0.5rem;
+        /* increased gap between stacked CTA buttons */
     }
 }
-

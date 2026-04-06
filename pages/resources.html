@@ -36,48 +36,277 @@
     <!-- Resources Section -->
     <section class="resources-section">
         <div class="resources-container">
-            <!-- External Resources -->
-            <div class="resources-category">
-                <h2 class="category-title">🔗 External Resources</h2>
-                <div class="external-resources-grid">
-                    <div class="external-resource">
-                        <h3>World Health Organization (WHO)</h3>
-                        <p>Global health information and evidence-based guidelines</p>
-                        <a href="https://www.who.int" target="_blank" class="external-link">Visit Website →</a>
-                    </div>
+            <div class="resources-tabs" role="tablist" aria-label="Resource filters">
+                <button type="button" class="resource-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button type="button" class="resource-tab" data-filter="articles" role="tab" aria-selected="false">Articles</button>
+                <button type="button" class="resource-tab" data-filter="first-sem" role="tab" aria-selected="false">1st Sem Videos</button>
+                <button type="button" class="resource-tab" data-filter="second-sem" role="tab" aria-selected="false">2nd Sem Videos</button>
+                <!-- <button type="button" class="resource-tab" data-filter="websites" role="tab" aria-selected="false">Websites</button> -->
+            </div>
 
-                    <div class="external-resource">
-                        <h3>American Nurses Association (ANA)</h3>
-                        <p>Professional standards and resources for nursing practice</p>
-                        <a href="https://www.nursingworld.org" target="_blank" class="external-link">Visit Website →</a>
-                    </div>
+            <!-- Articles / Readings -->
+            <div class="resources-grid" data-resource-type="articles" aria-label="Articles">
+                <div class="resource-card">
+                    <div class="resource-icon">📄</div>
+                    <h3>Students' Level of Satisfaction in Nursing Skills Demonstration</h3>
+                    <p>PDF article (basis for designing debriefing strategies)</p>
+                    <a href="https://www.ijmrhs.com/medical-research/students-level-of-satisfaction-in-nursing-skills-demonstration-basis-for-designing-debriefing-strategies.pdf" target="_blank" rel="noopener noreferrer" class="resource-link">Open PDF →</a>
+                </div>
 
-                    <div class="external-resource">
-                        <h3>CDC Public Health</h3>
-                        <p>Disease prevention, health promotion, and data resources</p>
-                        <a href="https://www.cdc.gov" target="_blank" class="external-link">Visit Website →</a>
-                    </div>
-
-                    <div class="external-resource">
-                        <h3>International Nursing Review</h3>
-                        <p>Peer-reviewed journal for nursing research and practice</p>
-                        <a href="#" target="_blank" class="external-link">Visit Website →</a>
-                    </div>
-
-                    <div class="external-resource">
-                        <h3>PubMed Central</h3>
-                        <p>Free access to biomedical and life sciences literature</p>
-                        <a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank" class="external-link">Visit Website
-                            →</a>
-                    </div>
-
-                    <div class="external-resource">
-                        <h3>Health Education Resources</h3>
-                        <p>Evidence-based health promotion materials and guides</p>
-                        <a href="#" target="_blank" class="external-link">Visit Website →</a>
-                    </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📄</div>
+                    <h3>Benefits of Return Demonstration in Nursing</h3>
+                    <p>Reading / essay reference</p>
+                    <a href="https://www.123helpme.com/essay/Benefits-Of-Return-Demonstration-In-Nursing-FCCGC7TEGU" target="_blank" rel="noopener noreferrer" class="resource-link">Open Article →</a>
                 </div>
             </div>
+
+            <!-- 1st Sem Videos -->
+            <div class="resources-grid" data-resource-type="first-sem" aria-label="1st semester videos">
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Fundal Height Measurement and Leopold’s Maneuver Demonstration</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/B1z31tNWmok?si=1JaIwUEvVs9M7raI" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Leopold’s Maneuver Step-by-Step Procedure</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/5K-ERuVrvj4?si=kA-NXIYVfDJxdeYL" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Proper Technique to Conduct Fundal Height Measurement</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/pgjPU0SIZF4?si=v33ofV6MG2fjUK1Z" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Straight Catheterization for Female Patients</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/UcNH7ub6iOQ?si=0fml5vaELiuZNKbQ" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Indwelling / Foley Catheterization for Female Patients</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/T6ZDBpVSg3U?si=Faga632I_9RzMnQZ" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Removal of Indwelling / Foley Catheter (Female Patients)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/9pRyoBXAYl0?si=TCyTxurBxKS2KkHJ" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Further Information about Bladder Retraining</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/14OSCEA0Fgk?si=TK8TC-1duOt1K6qa" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Capillary Blood Glucose Sample (Glucometer)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/DwHHp4pimCg?si=cTwQE7gHo_HVip-C" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>How to Check Blood Sugar Levels</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/FXhA3gNRHgo?si=d3vFsscJHsVdCU2P" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Unang Yakap Training (Essential Newborn Care)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/-D9yvXMwyfI?si=aUiCI7XpOegQB0Uh" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Bag Technique - Community Health Nursing (CHN)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/5zm6Keeomms?si=pOByVEfwk7wWxzbn" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Wound Care and Dressing Change Application</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/5Cid7q9_Uq0?si=4e4ed9GUkHv7DGIp" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>A Complete Guide to Vial Medication Preparation</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/6buCd7-nt_0?si=fSKhwgSEwuYsO6Lc" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>How to Perform Intradermal Injection</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/L8j9F0zm-4A?si=cLXHP-OdxhTylKfK" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Administering Medications: Oral, Otic, Ophthalmic, & Intranasal</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/4gRxw-q5kdQ?si=lqZQ-sttMoRUe8I6" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Ampule Preparation</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/mFKj3_Wk8m8?si=vtokLxmdnUdDa2Wb" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Subcutaneous Injection</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/KvREk8PUwhM?si=jS-zYO31rY9ASAoZ" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Intramuscular Injection</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/ft6f5HbCIzg?si=11xj7db5oUZf6ugw" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+            </div>
+
+            <!-- 2nd Sem Videos -->
+            <div class="resources-grid" data-resource-type="second-sem" aria-label="2nd semester videos">
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Infant’s Bath</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/h1nJy87APtI?si=k5tks0YqvLnIi2R8" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Infant Oro-Nasopharyngeal Suctioning</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/TUxQCPhaYbc?si=7-Mf78-LFVeCIKdx" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Infant Cardio-Pulmonary Resuscitation (1-Rescuer)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/n65HW1iJUuY?si=PFZVzXWfTcoYsHtz" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Infant Cardio-Pulmonary Resuscitation (2-Rescuer)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/cY5N8cks0Vw?si=5I0MKjAWQSrwx4Ey" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Starting an Intravenous Infusion</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/HxT7E14euZ8?si=7yxhtzmisVN3ws6_" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Monitoring and Maintaining an Infusion</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/IiB3ZV3FHdQ?si=-zMYTrBO01owORPj" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Changing Fluid Container and Tubing</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/8Y3GNSx_WEw?si=ohhZWP3cCtZyM9lu" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Discontinuing an Intravenous Infusion</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/__NZ_AICD2I?si=m1fRNP7J2zOf63zn" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Administering Medications via IV Push</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/d23c3onTdk8?si=H6sCqTs_ouBBmiOT" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Administering Medications via Drug Incorporation</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/rTXDXF--UnE?si=ipn2O7s56j8CiDE5" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Administering Medications via Volumetric Chamber (Soluset)</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/ox8ahR7T6-0?si=lZrns7SLCAgHlaPK" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Managing Blood Transfusion</h3>
+                    <p>YouTube video</p>
+                    <a href="https://youtu.be/29pWFY3AA_s?si=ez5KcwvXDtGo1_8F" target="_blank" rel="noopener noreferrer" class="resource-link">Watch →</a>
+                </div>
+            </div>
+
+            <!-- Websites -->
+            <!-- <div class="resources-grid" data-resource-type="websites" aria-label="External websites">
+                <div class="resource-card">
+                    <div class="resource-icon">🌐</div>
+                    <h3>World Health Organization (WHO)</h3>
+                    <p>Global health information and evidence-based guidelines</p>
+                    <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" class="resource-link">Visit Website →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🌐</div>
+                    <h3>American Nurses Association (ANA)</h3>
+                    <p>Professional standards and resources for nursing practice</p>
+                    <a href="https://www.nursingworld.org" target="_blank" rel="noopener noreferrer" class="resource-link">Visit Website →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🌐</div>
+                    <h3>CDC Public Health</h3>
+                    <p>Disease prevention, health promotion, and data resources</p>
+                    <a href="https://www.cdc.gov" target="_blank" rel="noopener noreferrer" class="resource-link">Visit Website →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🌐</div>
+                    <h3>PubMed Central</h3>
+                    <p>Free access to biomedical and life sciences literature</p>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank" rel="noopener noreferrer" class="resource-link">Visit Website →</a>
+                </div>
+            </div> -->
         </div>
     </section>
 

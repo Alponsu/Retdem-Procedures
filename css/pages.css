@@ -274,13 +274,14 @@
 }
 
 /* Spotlight & Trending Layout */
-.blog-top-row {
+.vlog-top-row {
     display: flex;
     gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-2xl);
+    /* margin-bottom: var(--spacing-2xl); */
 }
 
 .blog-spotlight {
+    margin-bottom: var(--spacing-sm);
     flex: 6;
 }
 
@@ -379,7 +380,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-sm);
 }
 
 .blog-grid.category-grid {
@@ -627,7 +628,7 @@
     background: var(--secondary-light);
     border-radius: var(--radius-lg);
     padding: var(--spacing-xl);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-sm);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 

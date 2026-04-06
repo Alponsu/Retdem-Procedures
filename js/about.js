@@ -44,11 +44,11 @@ highlightItems.forEach(item => {
 const valueItems = document.querySelectorAll('.value-item');
 
 valueItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
+    item.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-4px)';
     });
 
-    item.addEventListener('mouseleave', function() {
+    item.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0)';
     });
 });

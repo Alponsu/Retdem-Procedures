@@ -15,7 +15,7 @@ const blogTopRow = document.querySelector('.vlog-top-row');
 function updateVlogDisplay(filter) {
     if (filter === 'all') {
         mainTitle.textContent = "All Videos";
-        
+
         if (grid1stSem) grid1stSem.style.display = 'grid';
         if (grid2ndSem) grid2ndSem.style.display = 'grid';
         if (blogTopRow) blogTopRow.style.display = 'flex';
@@ -34,7 +34,7 @@ function updateVlogDisplay(filter) {
 
         vlogCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            
+
             if (category === '1st Semester') {
                 if (sem1Count < 4) {
                     showCard(card);
@@ -65,7 +65,7 @@ function updateVlogDisplay(filter) {
             if (grid1stSem) grid1stSem.style.display = 'none';
             if (grid2ndSem) grid2ndSem.style.display = 'grid';
         }
-        
+
         if (blogTopRow) blogTopRow.style.display = 'flex';
         if (topRowSpacer) topRowSpacer.style.display = 'block';
         if (middleSpacer) middleSpacer.style.display = 'none';
@@ -78,7 +78,7 @@ function updateVlogDisplay(filter) {
 
         vlogCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            
+
             if (category === filter) {
                 showCard(card);
             } else {

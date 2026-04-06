@@ -59,7 +59,7 @@ const locations = [
         id: 6,
         name: 'Bulacan Medical Center',
         location: '99 Potenciano Street in Malolos, Bulacan',
-        lat: 14.858861667452457, 
+        lat: 14.858861667452457,
         lng: 120.81658968079955,
         // activity: 'Construction Demo',
         description: 'This Bulacan Medical Center (BMC) is a government-owned tertiary hospital located at 99 Potenciano Street in Malolos, Bulacan serves as the main foundational training center for healthcare professionals in the region. As a Level 3 DOH accredited facility, it promotes a clinical environment that one can gain hands-on experience such as Intensive Care Unit (ICU), Neonatal ICU (NICU), and modern Outpatient Department (OPD).'
@@ -70,7 +70,7 @@ const locations = [
         id: 7,
         name: 'Twin Care Hospital Incorporated',
         location: 'Tapatan Road in Marungko, Angat, Bulacan',
-        lat: 14.945280110597121, 
+        lat: 14.945280110597121,
         lng: 121.0097486961465,
         // activity: 'Construction Demo',
         description: 'Located along the road side of Tapatan Road in Marungko, Angat, Bulacan is a private healthcare institution that provides a secondary level clinical care. It provides an excellent setting for developing core nursing competencies in General Medicine, Maternal and Child Health, and Emergency Services. The facility’s layout and community focus allow for a high level of direct patient interaction, making it an ideal location to practice therapeutic communication and systematic nursing documentation within a professional healthcare team.'

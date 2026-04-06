@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Nursing RetDem</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
-        (function() {
+        (function () {
             const darkMode = localStorage.getItem('darkMode');
             if (darkMode === 'true') {
                 document.documentElement.classList.add('dark-mode');
@@ -16,6 +19,7 @@
         })();
     </script>
 </head>
+
 <body>
     <!-- Navigation -->
     <div class="navbar" data-include="../partials/header.html"></div>
@@ -36,34 +40,17 @@
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            required 
-                            placeholder="Your full name"
-                        >
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            required 
-                            placeholder="your@email.com"
-                        >
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone Number (Optional)</label>
-                        <input 
-                            type="tel" 
-                            id="phone" 
-                            name="phone" 
-                            placeholder="+1 (555) 000-0000"
-                        >
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
                     </div>
 
                     <div class="form-group">
@@ -80,21 +67,12 @@
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            rows="6" 
-                            required 
-                            placeholder="Tell us more about your inquiry..."
-                        ></textarea>
+                        <textarea id="message" name="message" rows="6" required
+                            placeholder="Tell us more about your inquiry..."></textarea>
                     </div>
 
                     <div class="form-checkbox">
-                        <input 
-                            type="checkbox" 
-                            id="subscribe" 
-                            name="subscribe"
-                        >
+                        <input type="checkbox" id="subscribe" name="subscribe">
                         <label for="subscribe">Subscribe to our newsletter for updates</label>
                     </div>
 
@@ -124,8 +102,8 @@
                     <div class="contact-info-item">
                         <h4>⏰ Office Hours</h4>
                         <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
-                        Saturday: 10:00 AM - 2:00 PM<br>
-                        Sunday: Closed</p>
+                            Saturday: 10:00 AM - 2:00 PM<br>
+                            Sunday: Closed</p>
                     </div>
                 </div>
 
@@ -157,32 +135,38 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <h4 class="faq-question">How can I volunteer with the RetDem program?</h4>
-                    <p class="faq-answer">You can reach out to us through the contact form above or visit the resources page for more information about volunteer opportunities with our nursing students.</p>
+                    <p class="faq-answer">You can reach out to us through the contact form above or visit the resources
+                        page for more information about volunteer opportunities with our nursing students.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4 class="faq-question">Is the program open to students from other institutions?</h4>
-                    <p class="faq-answer">While primarily designed for our nursing students, we welcome inquiries from other institutions about collaboration opportunities.</p>
+                    <p class="faq-answer">While primarily designed for our nursing students, we welcome inquiries from
+                        other institutions about collaboration opportunities.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4 class="faq-question">How often are activities conducted?</h4>
-                    <p class="faq-answer">Our RetDem activities are scheduled regularly throughout the academic year. Visit our interactive map to see upcoming activities in your area.</p>
+                    <p class="faq-answer">Our RetDem activities are scheduled regularly throughout the academic year.
+                        Visit our interactive map to see upcoming activities in your area.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4 class="faq-question">Can healthcare organizations partner with us?</h4>
-                    <p class="faq-answer">Absolutely! We're always looking for meaningful partnerships. Please contact us to discuss potential collaboration opportunities.</p>
+                    <p class="faq-answer">Absolutely! We're always looking for meaningful partnerships. Please contact
+                        us to discuss potential collaboration opportunities.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4 class="faq-question">How can I access the resources?</h4>
-                    <p class="faq-answer">Visit our Resources page to download educational materials, guides, and other helpful information about community health nursing.</p>
+                    <p class="faq-answer">Visit our Resources page to download educational materials, guides, and other
+                        helpful information about community health nursing.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4 class="faq-question">Do you offer certificates or credentials?</h4>
-                    <p class="faq-answer">Yes, students who complete the program receive certificates of completion and documentation of their community health service hours.</p>
+                    <p class="faq-answer">Yes, students who complete the program receive certificates of completion and
+                        documentation of their community health service hours.</p>
                 </div>
             </div>
         </div>
@@ -195,4 +179,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/contact.js"></script>
 </body>
+
 </html>

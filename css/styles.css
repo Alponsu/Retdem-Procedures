@@ -105,6 +105,14 @@
     color: var(--primary-teal) !important;
 }
 
+.dark-mode .home .hamburger span {
+    background: var(--text-primary) !important;
+}
+
+.dark-mode .home .hero-accent {
+    color: #00a8b5 !important;
+}
+
 .dark-mode #darkModeToggle {
     border: none;
 }
@@ -518,7 +526,11 @@ a {
 }
 
 .home .logo-subtext {
-    color: var(--primary-teal);
+    color: var(--secondary-gray);
+}
+
+.hero-buttons .btn-primary {
+    background: #00eeff;
 }
 
 .home .nav-link {

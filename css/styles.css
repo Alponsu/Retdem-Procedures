@@ -592,7 +592,7 @@ a {
 }
 
 .home .hero-accent {
-    color: #ffc107;
+    color: #00a8b5;
     font-weight: 700;
 }
 
@@ -613,10 +613,10 @@ a {
     position: absolute;
     width: min(520px, 90%);
     aspect-ratio: 1;
-    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    background: linear-gradient(135deg, #00a8b5 0%, #008a94 100%);
     border-radius: 45% 55% 50% 50% / 50% 45% 55% 50%;
     transform: translate(10%, -5%);
-    filter: drop-shadow(0 20px 40px rgba(255, 193, 7, 0.25));
+    filter: drop-shadow(0 20px 40px rgba(0, 168, 181, 0.25));
     animation: float 6s ease-in-out infinite;
 }
 
@@ -645,14 +645,14 @@ a {
 }
 
 .btn-primary {
-    background: #ffc107;
+    background: var(--primary-teal);
     color: #1a1f2e;
 }
 
 .btn-primary:hover {
-    background: #ffb300;
+    background: var(--primary-teal);
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(255, 193, 7, 0.35);
+    box-shadow: 0 10px 24px rgba(0, 168, 181, 0.35);
 }
 
 .btn-secondary {

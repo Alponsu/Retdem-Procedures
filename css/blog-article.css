@@ -257,13 +257,8 @@ p {
     scroll-margin-top: 120px;
 }
 
-<<<<<<< HEAD
-.article-content ul {
-    margin-bottom: var(--spacing-lg);
-=======
 .article-content ul, .article-content ol{
     padding-left: var(--spacing-xl);
->>>>>>> 18d8424e3a9552b747dee2d66438e16c4b0aa4a2
 }
 
 /* Support the inline "image-placeholder-container" blocks used in articles */

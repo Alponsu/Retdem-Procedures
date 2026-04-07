@@ -108,6 +108,8 @@ filterBtns.forEach(btn => {
         btn.classList.add('active');
         const filter = btn.getAttribute('data-filter');
         updateBlogDisplay(filter);
+        // Save the active filter to sessionStorage
+        sessionStorage.setItem('activeBlogFilter', filter);
     });
 });
 
@@ -124,5 +126,16 @@ readMoreBtns.forEach(btn => {
 
 // Initial display setup
 document.addEventListener('DOMContentLoaded', () => {
-    updateBlogDisplay('all');
+    // Restore the active filter from sessionStorage if it exists
+    const savedFilter = sessionStorage.getItem('activeBlogFilter');
+    const initialFilter = savedFilter || 'all';
+    
+    // Set the active button
+    const activeBtn = document.querySelector(`.filter-btn[data-filter="${initialFilter}"]`);
+    if (activeBtn) {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        activeBtn.classList.add('active');
+    }
+    
+    updateBlogDisplay(initialFilter);
 });

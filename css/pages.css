@@ -1583,7 +1583,7 @@
 
 /* ========== Resources Section ========== */
 .resources-section {
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-lg);
     background: var(--secondary-gray);
 }
 
@@ -1624,6 +1624,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-xl);
+    padding-bottom:  var(--spacing-xl);
 }
 
 .resource-card {

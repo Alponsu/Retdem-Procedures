@@ -1590,6 +1590,7 @@
 .resources-container {
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .resources-tabs {
@@ -1624,6 +1625,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-xl);
+    margin: var(--spacing-xl);
 }
 
 .resource-card {

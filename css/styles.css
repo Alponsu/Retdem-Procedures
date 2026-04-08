@@ -649,8 +649,10 @@ a {
     position: relative;
     height: auto;
     object-fit: contain;
-    transform: translate(8%, 0);
+    transform: translate(-6%, 0);
     padding: 0 100px 0 0;
+    max-width: 136%;
+    top:62px;
 }
 
 /* ========== Buttons ========== */
@@ -1030,34 +1032,6 @@ a {
         border-bottom-color: rgba(var(--primary-teal-rgb), 0.18);
     } */
 
-    .home .hero {
-        padding-top: var(--spacing-2xl);
-    }
-
-    .home .hero-inner {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
-        text-align: center;
-    }
-
-    .home .hero-buttons {
-        justify-content: center;
-    }
-
-    .home .hero-media {
-        /* min-height: 320px; */
-        min-height: 195px;
-    }    
-    
-    .home .hero-content {
-        padding: 0 var(--spacing-sm);
-    }
-
-    .home .hero-blob,
-    .home .hero-image {
-        transform: none;
-        padding: 0;
-    }
 
     /* hero image here */
     /* .home .hero-image {
@@ -1367,7 +1341,7 @@ a {
 
 /* Make the primary (Explore Maps) button a bit larger and more touch-friendly */
 .hero-buttons .btn-primary {
-    padding: calc(var(--spacing-sm) + 0.25rem) calc(var(--spacing-lg) + 0.5rem);
+    /* padding: calc(var(--spacing-sm) + 0.25rem) calc(var(--spacing-lg) + 0.5rem); */
     border-radius: calc(var(--radius-md) + 0.25rem);
 }
 
@@ -1691,312 +1665,41 @@ a {
     }
 }
 
-/* @media (max-width: 483px) {
-    .home .hero-content {
-        padding: 0 var(--spacing-sm);
-    }
-}
 
-@media (max-width: 565px) {
-    .home .hero-content {
-        padding: 0 var(--spacing-sm);
-    }
+@media (max-width: 1220px) {
 
-    .home .hero-image {
-        transform: translate(1%, -100px)!important;
-        padding: 0 6px 0 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .home .hero-content {
-        padding: 0 var(--spacing-sm);
-    }
-
-    .home .hero-image {
-        transform: translate(1%, -100px)!important;
-        padding: 0 6px 0 0;
-    }
-}
-
-@media (max-width: 1024px) {
-    .home .hero-content {
-        padding: 0 var(--spacing-sm);
+    .home .hero {
+        padding-top: var(--spacing-2xl);
     }
 
     .home .hero-inner {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
         text-align: center;
-        justify-content: center;
     }
 
     .home .hero-buttons {
         justify-content: center;
     }
-}
 
-@media (max-width: 1749px) {
-    .hero-content {
-        padding: 0px 0 0 10rem;
+    .home .hero-media {
+        /* min-height: 320px; */
+        min-height: 195px;
     }
-}
 
-@media (max-width: 1507px) {
-    .hero-content {
-        padding: 0px 0 0 2rem;
+    .home .hero-content {
+        padding: 0 var(--spacing-sm);
     }
-}
 
-@media (max-width: 1337px) {
+    .home .hero-blob,
     .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 3rem;
-    }
-}
-
-@media (max-width: 1343px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 3rem;
-    }
-}
-
-@media (max-width: 1359px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 3rem;
-    }
-}
-
-@media (max-width: 1371px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 3rem;
-    }
-}
-
-@media (max-width: 1381px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 3rem;
-    }
-}
-
-@media (max-width: 1443px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1189px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 78px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1212px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 48px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1225px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 48px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1245px) {
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 48px);
-        padding: 0 48px 0 0;
-    }
-
-    .home .hero-buttons {
-        padding-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1025px) {
-    .hero-buttons .btn-primary {
-        padding: 0.75rem 1.75rem;
-    }
-
-    .home .hero-title {
-        font-size: 2.4rem;
+        transform: none;
+        padding: 0;
     }
 
     .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 84px);
-        padding: 0 6px 0 0;
+        max-width: 100%;
+        transform: translate(8%, 0);
+        top: 0;
     }
-}
-
-@media (max-width: 1210px) {
-    .hero-buttons .btn-primary {
-        padding: 0.75rem 1.75rem;
-    }
-
-    .home .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 17px);
-        padding: 0 6px 0 0;
-    }
-}
-
-@media (max-width: 1361px) {
-    .hero-buttons .btn-primary {
-        padding: 0.75rem 1.75rem;
-    }
-
-    .home .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 38px);
-        padding: 0 6px 0 0;
-    }
-}
-
-@media (max-width: 1025px),
-(max-width: 1123px) {
-    .hero-buttons .btn-primary {
-        padding: 0.75rem 1.75rem;
-    }
-
-    .home .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(8%, 86px);
-        padding: 0 6px 0 0;
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-buttons .btn-primary {
-        padding: 0.75rem 1.75rem;
-    }
-
-    .home .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(1%, 3px);
-        padding: 0 6px 0 0;
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-buttons .btn-primary {
-        padding: 0.75rem 1.75rem;
-    }
-
-    .home .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .home .hero-image {
-        position: relative;
-        height: auto;
-        object-fit: contain;
-        transform: translate(1%, 3px);
-        padding: 0 6px 0 0;
-    }
-} */
-
-@media (max-width: 1627px) {
-    
 }

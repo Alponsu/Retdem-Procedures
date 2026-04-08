@@ -73,7 +73,41 @@ function setActiveNavLink() {
     });
 }
 
+// ========== Clear Blog Filter on Non-Blog Pages ==========
+function clearBlogFilterIfNeeded() {
+    // List of blog-related pages where filter should persist
+    const blogRelatedPages = [
+        'blog.html',
+        'fundic-height.html',
+        'catheterization.html',
+        'cbg.html',
+        'einc.html',
+        'bag-technique.html',
+        'vial.html',
+        'meds.html',
+        'ampule.html',
+        'bath.html',
+        'sunctioning.html',
+        'cardio.html',
+        'intravenous.html',
+        'monitoring.html',
+        'fluid-container.html',
+        'discontinuing.html',
+        'administering-meds.html',
+        'blood.html',
+        'main-blog.html'
+    ];
+
+    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    
+    // If current page is not a blog-related page, clear the blog filter
+    if (!blogRelatedPages.includes(currentPage)) {
+        sessionStorage.removeItem('activeBlogFilter');
+    }
+}
+
 function initHeaderUI() {
+    clearBlogFilterIfNeeded();
     initNavigation();
     setActiveNavLink();
 }

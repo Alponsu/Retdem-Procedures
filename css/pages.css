@@ -658,6 +658,11 @@
         padding: var(--spacing-md) var(--spacing-xl);
     }
 
+    .blog-filters {
+        display: flex;
+        flex-direction: column;
+    }
+
     .blog-divider {
         margin-bottom: var(--spacing-lg);
     }

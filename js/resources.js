@@ -18,10 +18,15 @@ if (resourceTabs.length && resourceSections.length) {
             // Filter resources
             resourceSections.forEach(section => {
                 const type = section.getAttribute('data-resource-type');
+                const categoryLabel = section.querySelector('.category-label');
 
                 if (filter === 'all' || type === filter) {
                     section.style.display = 'grid';
                     section.style.animation = 'slideUp 0.6s ease-out';
+                    // Hide category label when filtered (show only when "all")
+                    if (categoryLabel) {
+                        categoryLabel.style.display = filter === 'all' ? 'block' : 'none';
+                    }
                     requestAnimationFrame(() => {
                         section.style.opacity = '1';
                     });

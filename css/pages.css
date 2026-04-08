@@ -1585,6 +1585,7 @@
 .resources-section {
     padding: var(--spacing-lg) var(--spacing-lg);
     background: var(--secondary-gray);
+    height: 100%;
 }
 
 .resources-container {
@@ -1598,7 +1599,7 @@
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: var(--spacing-lg);
 }
@@ -1626,6 +1627,16 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-xl);
     padding-bottom:  var(--spacing-xl);
+}
+
+.category-label {
+    grid-column: 1 / -1;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    /* color: var(--primary-teal); */
+    /* margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--primary-teal); */
 }
 
 .resource-card {

@@ -511,7 +511,7 @@ a {
 }
 
 /* ========== Home Header (screenshot-style) ========== */
-.home .navbar {
+/* .home .navbar {
     background: transparent;
     box-shadow: none;
     border-bottom: none;
@@ -554,7 +554,7 @@ a {
 
 .home .nav-icon-btn i {
     color: var(--secondary-light);
-}
+} */
 
 .home .nav-cta {
     background: var(--secondary-light);
@@ -683,18 +683,18 @@ a {
 .btn-secondary {
     background: transparent;
     color: var(--secondary-light);
-    border-color: var(--secondary-light);
+    /* border-color: var(--secondary-light); */
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--secondary-light);
+    background:rgb(147 147 147);
+    /* border-color: var(--primary-dark); */
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary:hover .fa-moon {
-    color: var(--secondary-light-gray);
+    color: white;
 }
 
 /* ========== Features Section ========== */
@@ -848,6 +848,10 @@ a {
     background: var(--primary-dark);
     color: var(--secondary-light);
     padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.footer p{
+    text-align: center;
 }
 
 .footer-container {

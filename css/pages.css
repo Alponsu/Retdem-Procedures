@@ -640,6 +640,8 @@
     }
 
     .blog-grid.category-grid {
+        display: grid;
+        grid-template-columns:1fr;
         padding-top: var(--spacing-lg);
     }
 
@@ -1588,7 +1590,7 @@
 
 /* ========== Resources Section ========== */
 .resources-section {
-    padding: var(--spacing-lg) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-lg) 10rem var(--spacing-lg);
     background: var(--secondary-gray);
     height: 100%;
 }
